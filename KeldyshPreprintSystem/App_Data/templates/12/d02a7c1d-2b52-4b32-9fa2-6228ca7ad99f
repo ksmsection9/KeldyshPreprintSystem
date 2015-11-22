@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<MailInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Subject>Р Р°Р·СЂРµС€РµРЅ С‚РёСЂР°Р¶</Subject>
+  <Body>Р Р°Р·СЂРµС€РµРЅ С‚РёСЂР°Р¶
+@allauthors@
+@title@
+
+@message@</Body>
+  <From>shirokiy@keldysh.ru</From>
+  <To>toTypographer</To>
+  <Attachments />
+  <HourInterval>24</HourInterval>
+  <IsClosed>false</IsClosed>
+  <PaperId>-1</PaperId>
+  <StateId>12</StateId>
+  <CreationDate>2015-04-17T12:21:00.829+04:00</CreationDate>
+  <Id>StatusMailTemplate</Id>
+</MailInfo>

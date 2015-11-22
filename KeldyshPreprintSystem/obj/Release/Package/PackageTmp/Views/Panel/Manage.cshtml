@@ -1,0 +1,356 @@
+﻿@model KeldyshPreprintSystem.Models.PanelContextModel
+@{
+    ViewBag.Title = "Управление заявкой";
+    KeldyshPreprintSystem.Models.PaperSubmissionModel paper = KeldyshPreprintSystem.Tools.PaperSubmissionControllerHelper.GetModel(Model.paperId);
+    int isAuthor = 0;
+    if (KeldyshPreprintSystem.Tools.AccountHelper.GetUserRole(WebSecurity.CurrentUserId) == "user")
+    {
+        isAuthor = 1;
+    }
+}
+
+<div class="mainDiv">
+    <table style="overflow: scroll; width: 99%; height: 800px">
+        <tr>
+            <td colspan="3">
+                <h3 style="display: inline; margin: 0px;">
+                    @foreach (KeldyshPreprintSystem.Models.Author author in paper.Authors)
+                    {
+                        //string name = author.FirstnameRussian.FirstOrDefault() + "." + (author.PatronymRussian != null ? author.PatronymRussian.FirstOrDefault() + "." : string.Empty) + " " + author.LastnameRussian;
+                        string name = author.FirstnameRussian + " " + author.PatronymRussian + " " + author.LastnameRussian;
+                        @name
+                        if (paper.Authors.Last().Id != author.Id)
+                        {           
+                        @Html.Raw(", ");
+                        }
+                    }
+                </h3>
+                <h3 style="font-style: italic; margin-bottom: 4px; margin-top: 4px;">@paper.TitleRussian</h3>
+                <div id="statusInfo">
+                    @Html.Partial("_statusInformationPartial", paper)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="primaryActionMenuContainer" class="panelContainer">
+                    <table class="keldyshtable">
+                        <tr class="lighttitlecell">
+                            <td class="lighttitlecell">
+                                <div class="lighttitle">Продвижение статуса</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="primaryActionMenu" class="panelContentContainer">
+                                    @Html.Partial("_primaryActionMenuPartial", paper)
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+
+            <td>
+                <div id="secondaryActionMenuContainer" class="panelContainer">
+                    <table class="keldyshtable">
+                        <tr class="lighttitlecell">
+                            <td class="lighttitlecell">
+                                <div class="lighttitle">Заявка</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="secondaryActionMenu" class="panelContentContainer">
+                                    @Html.Partial("_secondaryActionMenuPartial", paper)
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <div id="fileMenuContainer" class="panelContainer">
+                    <table class="keldyshtable">
+                        <tr class="lighttitlecell">
+                            <td class="lighttitlecell">
+                                <div class="lighttitle">Файлы</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="fileMenu" class="panelContentContainer">
+                                    @Html.Partial("_actualVersionPartial", paper)
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+
+        @{
+                
+            string role = KeldyshPreprintSystem.Tools.AccountHelper.GetUserRole(WebSecurity.CurrentUserId);
+            int subLogIdPart = KeldyshPreprintSystem.Tools.PanelHelper.GetSubLogPartId(role);
+            int subLogIdPartAdmin = KeldyshPreprintSystem.Tools.PanelHelper.GetSubLogPartId("admin");
+            int subLogIdPartCorrector = KeldyshPreprintSystem.Tools.PanelHelper.GetSubLogPartId("corrector");
+            int subLogIdPartAuthor = KeldyshPreprintSystem.Tools.PanelHelper.GetSubLogPartId("user");
+        }
+        <tr>
+            <td colspan="3">
+                <table style="width: 100%; height: 500px; overflow: scroll;">
+                    @*     <tr style="height: 10%;">
+                        <td>
+                            <div id='cssmenu'>
+                                <ul role="tablist">
+                                    <li id="sublog_0" class="active"><a href="#" onclick="setSubLog(0);" role="presentation">Общий</a></li>
+                                    @if (role != "user")
+                                    {
+                                        <li id="sublog_1"><a href="#" onclick="setSubLog(1);" role="presentation">Редакции</a></li>
+                                    }
+                                    @if (role != "admin")
+                                    {
+                                        int id3 = subLogIdPartAdmin * subLogIdPart;
+                                        <li id="sublog_@id3"><a href="#" onclick="setSubLog(@subLogIdPartAdmin*subLogIdPart);" role="presentation">Редактору</a></li>
+                                    }
+                                    @if (role != "user")
+                                    {
+                                        int id4 = subLogIdPartAuthor * subLogIdPart;
+                                        <li id="sublog_@id4"><a href="#" onclick="setSubLog(@subLogIdPartAuthor*subLogIdPart);" role="presentation">Автору</a></li>
+                                    }
+                                    @if (role != "corrector")
+                                    {
+                                        int id5 = subLogIdPartCorrector * subLogIdPart;
+                                        <li id="sublog_@id5"><a href="#" onclick="setSubLog(@subLogIdPartCorrector*subLogIdPart);" role="presentation">Корректору</a></li>
+                                    }
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>*@
+                    <tr style="height: 70%">
+                        <td>
+                            <div class="chatBox" id="logMessagesContainer" style="height: 500px; overflow: auto">
+                                <div class="chatBox" style="overflow: hidden; border: 0;" id="logMessages"></div>
+                            </div>
+                            @*                            <textarea class="chatBox" id="logMessages" readonly="readonly" placeholder="Журнал пуст..." style="width: 100%; height: 100%; overflow: auto;"></textarea>*@
+                        </td>
+                    </tr>
+                    <tr style="height: 20%">
+                        <td>
+                            <div id="logSendBox" style="vertical-align: bottom">
+                                <table style="width: 100%;">
+                                    <tr>
+                                        <td style="width: 90%">
+                                            <textarea id="chatInput" cols="10" style="width: 99%; height: 100px; overflow: auto; resize: vertical;" placeholder="Введите сообщение..."></textarea>
+                                        </td>
+                                        <td style="width: 10%">
+                                            @Html.RadioButton("recipient", "toAll", true)<p style="display: inline;">Всем</p>
+                                            <br />
+                                            @if (role != "user")
+                                            {
+                                                @Html.RadioButton("recipient", "toEditorial", false)<p style="display: inline;">Редакции</p>
+                                                <br />
+                                            }
+                                            @if (role != "admin")
+                                            {
+                                                @Html.RadioButton("recipient", "toEditor", false)<p style="display: inline;">Редактору</p>
+                                                <br />
+                                            }
+                                            @if (role != "corrector")
+                                            {                                                 
+                                                @Html.RadioButton("recipient", "toCorrector", false)<p style="display: inline;">Корректору</p>
+                                                <br />
+                                            }
+                                            @if (role != "user")
+                                            {
+                                                @Html.RadioButton("recipient", "toUser", false)<p style="display: inline;">Автору</p>
+                                                <br />
+                                            }
+                                            <br />
+                                            <a class="sumbitSubmissionBtn" id="sendMessageBtn" style="text-align: center;" onclick="sendMessage();">Отправить</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+        </tr>
+    </table>
+
+    @*floating debug window*@
+    <div class="floatingDebug">
+        @Html.Partial("_changeUserRolePartial", paper.Id)
+    </div>
+</div>
+
+@*<script src="@Url.Content("~/Scripts/tinymce/tiny_mce.js")" type="text/javascript"></script>*@
+<script src="@Url.Content("~/Scripts/wysibb/jquery.wysibb.min.js")"></script>
+<link rel="stylesheet" href="@Url.Content("~/Scripts/wysibb/theme/default/wbbtheme.css")" />
+<script type="text/javascript" src="@Url.Content("~/Scripts/bbcode.min.js")"></script>
+<script src="@Url.Content("~/Scripts/notify.min.js")"></script>
+<script>
+    //tinyMCE.init({
+    //    // General options
+    //    mode: "exact",
+    //    elements: "chatInput"
+    //});
+
+    //tinyMCE.init({
+    //    // General options
+    //    mode: "exact",
+    //    theme: "simple",
+    //    toolbar: false,
+    //    elements: "logMessages"
+    //});
+
+    $(function () {
+        var wbbOptChatInput = {
+            buttons: "bold,italic,underline,|,img,link,|,quote"
+        }
+
+        $("#chatInput").wysibb(wbbOptChatInput);
+        //$("#logMessages").wysibb();
+    });
+
+    var lastLogIds = {
+        '0': 0,
+        '1': 0,
+       @* '@subLogIdPartAdmin': 0,
+        '@subLogIdPartAuthor': 0,
+        '@subLogIdPartCorrector': 0*@
+    };
+
+    var chatBuffer = {
+        '0': '',
+        '1': '',
+     @*   '@subLogIdPartAdmin': '',
+        '@subLogIdPartAuthor': '',
+        '@subLogIdPartCorrector': ''*@
+    }
+
+    var loadOnce = false;
+    var initialScrollDown = false;
+    var currentSubLogId = parseInt('@isAuthor');
+    var timerId;
+    var partialRefreshTimerId;
+
+    $(document).ready(function () {
+        $.ajaxSetup({ cache: false });
+        $('#cssmenu').prepend('<div id="bg-one"></div><div id="bg-two"></div><div id="bg-three"></div><div id="bg-four"></div>');
+        $(document).ajaxComplete(function (e, xhr, options) {
+            if (options.url.toString().indexOf('Load') < 0 && options.url.toString().indexOf('Dynamically') < 0) { // Or whatever test you may need
+                loadPartial();
+            }
+        });
+        startRefresh();
+    });
+
+@*    function setSubLog(subLogId) {
+        if (subLogId > -1) {
+            $('#logMessages').val('');
+            $('#cssmenu').children('ul').children('li').each(function () { $(this).attr('class', '') });
+            currentSubLogId = subLogId;
+            $('#sublog_' + currentSubLogId).attr('class', 'active');
+            $.get("@Url.Action("GetLog", "Panel", new { area = "", controller = "Panel" }, "https")" + "?paperId=@paper.Id&subLogId=" + currentSubLogId + "&lastLogId=0&anticache=@Guid.NewGuid().ToString()", function (data) { lastLogIds[currentSubLogId.toString()] = data.lastId; chatBuffer[currentSubLogId.toString()] = decodeURIComponent(data.content); $("#logMessages").html(''); $("#logMessages").html(new bbcode.Parser().toHTML(chatBuffer[currentSubLogId.toString()])); $("#logMessagesContainer").scrollTop(($("#logMessagesContainer")[0]).scrollHeight); }, "json");
+            pauseRefresh();
+            lastLogIds[currentSubLogId.toString()] = 0;
+            startRefresh();
+        }
+    }*@
+
+    function sendMessage() {
+        var message = encodeURIComponent($('#chatInput').bbcode());
+        $('#chatInput').bbcode('');
+        $('#chatInput').val('');
+        $('#chatInput').sync();
+        var recipient = $("input[id=recipient]:checked").val();
+        //tinyMCE.get('chatInput').setContent('');
+        var logId = lastLogIds[currentSubLogId.toString()];
+        if (recipient != null) {
+            if (recipient == "toEditorial" || recipient == "toCorrector" || recipient == "toEditor") {//e.g. send to your currentSubLogId
+                $.get("@Url.Action("Log", "Panel", new { area = "", controller = "Panel" }, "https")" + "?text=" + message + "&paperId=@paper.Id&subLogId=" + currentSubLogId + "&lastLogId=" + logId + "&anticache=@Guid.NewGuid().ToString()");
+            }
+            else {
+                //send to all unconditionally
+                var subLogIdForNow = 1;
+                $.get("@Url.Action("Log", "Panel", new { area = "", controller = "Panel" }, "https")" + "?text=" + message + "&paperId=@paper.Id&subLogId=" + subLogIdForNow + "&lastLogId=" + logId + "&emailToRole=" + recipient + "anticache=@Guid.NewGuid().ToString()");
+            }
+        }
+        else {
+            $.get("@Url.Action("Log", "Panel", new { area = "", controller = "Panel" }, "https")" + "?text=" + message + "&paperId=@paper.Id&subLogId=" + currentSubLogId + "&lastLogId=" + logId + "&anticache=@Guid.NewGuid().ToString()");
+        }
+    }
+
+    function updateChat() {
+        $("#logMessagesContainer").load("@Url.Action("LoadLogOutputDynamically", "Panel", new { area = "", controller = "Panel" }, "https")" + "?id=@paper.Id&anticache=@Guid.NewGuid().ToString()", function () {
+            if (!initialScrollDown) {
+                $("#logMessagesContainer").scrollTop(($("#logMessagesContainer")[0]).scrollHeight);
+                initialScrollDown = true;
+            }
+            $("#logMessages").find("span").each(function () {
+                var message = $(this).html().toString();
+                $(this).replaceWith("<span style=\"white-space:nowrap\">" + (new bbcode.Parser().toHTML(message)).toString() + "</span>");
+                //console.log("message: " + (new bbcode.Parser().toHTML(message)));
+            });
+
+            $("#logMessages").find("label").each(function () {
+                var message = $(this).html().toString();
+                $(this).replaceWith(new bbcode.Parser().toHTML(message).toString());
+                //console.log("message: " + (new bbcode.Parser().toHTML(message)));
+            });
+
+
+            $("#logMessages").find("#newMessage").each(function () {
+                var dt = new Date();
+                var secondsNow = parseInt(dt.getSeconds());
+                var lastMessageSeconds = parseInt($(this).attr("class"));
+                var span = 0;
+                if (lastMessageSeconds > secondsNow)
+                    span = 60 - lastMessageSeconds + secondsNow;
+                else
+                    span = secondsNow - lastMessageSeconds;
+                if (span < 10)//interval
+                    $("#logMessagesContainer").scrollTop(($("#logMessagesContainer")[0]).scrollHeight);
+            });
+
+        });
+
+    }
+
+    //function setContents(data) {
+    //    lastLogIds[currentSubLogId.toString()] = data.lastId;
+    //    if (data.content != '') {
+           @* var w = $('#logMessages').width();
+            var h = $('#logMessages').height();
+            $('#logMessages').html('<img style="dislay:block; display: block; margin: 0 auto;" src="@Url.Content("~/Content/ajax-loader.gif")"></img>').width(w).height(h);*@
+
+    //        chatBuffer[currentSubLogId.toString()] += decodeURIComponent(data.content);
+    //        $("#logMessages").html(new bbcode.Parser().toHTML(chatBuffer[currentSubLogId.toString()]));
+    //        $("#logMessagesContainer").scrollTop(($("#logMessagesContainer")[0]).scrollHeight);
+    //    }
+    //}
+
+    function startRefresh() {
+        updateChat();
+        timerId = setInterval(updateChat, 10000);//interval of updating should be inserted to PanelModel since it is used in logOutputPartial and it is crucial to values to be comprehended
+        partialRefreshTimerId = setInterval(loadPartial, 10000);
+    }
+
+    function pauseRefresh() {
+        clearInterval(timerId);
+    }
+
+    function loadPartial() {
+        $("#statusInfo").load("@Url.Action("LoadStatusInformationDynamically", "Panel", new { area = "", controller = "Panel" }, "https")" + "?id=@paper.Id&anticache=@Guid.NewGuid().ToString()");
+        $("#primaryActionMenu").load("@Url.Action("LoadPrimaryActionsDynamically", "Panel", new { area = "", controller = "Panel" }, "https")" + "?id=@paper.Id&anticache=@Guid.NewGuid().ToString()");
+        if (!loadOnce) {//initial actions
+            $("#fileMenu").load("@Url.Action("LoadFileVersionDynamically", "Panel", new { area = "", controller = "Panel" }, "https")" + "?id=@paper.Id&anticache=@Guid.NewGuid().ToString()");
+            loadOnce = true;
+        }
+        //$.notify("Обновлено", { position: "bottom right", autoHideDelay: 3000 });
+    }
+</script>

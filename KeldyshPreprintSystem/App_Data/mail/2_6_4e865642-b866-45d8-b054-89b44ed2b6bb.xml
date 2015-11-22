@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<MailInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Subject>РћС‚СЂР°Р±РѕС‚Р°РЅС‹ Р·Р°РјРµС‡Р°РЅРёСЏ РєРѕСЂСЂРµРєС‚РѕСЂР°: @firstauthor@</Subject>
+  <Body>РћС‚СЂР°Р±РѕС‚Р°РЅС‹ Р·Р°РјРµС‡Р°РЅРёСЏ
+ РєРѕСЂСЂРµРєС‚РѕСЂР° @allauthors@, 
+@title@.</Body>
+  <From>shirokiy@keldysh.ru</From>
+  <To>admin@localhost.localhost</To>
+  <Attachments>
+    <string>C:\Users\rshiroki\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem\App_Data\uploads\2\3afa8bcc-d99f-488a-b0d4-f126241263aa.pdf</string>
+    <string />
+  </Attachments>
+  <HourInterval>24</HourInterval>
+  <IsClosed>false</IsClosed>
+  <PaperId>2</PaperId>
+  <StateId>6</StateId>
+  <CreationDate>2015-04-14T00:10:09.1009849+03:00</CreationDate>
+  <Id>2_6_4e865642-b866-45d8-b054-89b44ed2b6bb</Id>
+</MailInfo>

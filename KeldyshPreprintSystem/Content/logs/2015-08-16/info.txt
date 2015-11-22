@@ -1,0 +1,24 @@
+2015-08-16 21:31:36.0923|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-16 21:31:44.8419|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-16 21:31:51.8474|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-08-16 21:32:05.0212|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: admin@localhost.localhost admin
+2015-08-16 21:32:32.2501|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-16 21:32:32.2501|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-08-16 21:32:36.3441|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-16 21:32:38.2348|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-16 21:33:35.9781|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-16 21:34:06.5141|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-16 21:34:08.9830|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-16 21:34:53.9068|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-08-16 21:35:18.2090|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-16 21:35:20.0372|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-16 21:35:35.5066|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-16 21:36:13.7270|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-08-16 21:36:13.7270|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-16 21:36:13.9927|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-16 21:36:35.5573|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-16 21:36:47.0628|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-16 21:36:54.1798|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-08-16 21:37:07.9977|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-16 22:17:54.8316|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-08-16 23:16:08.0370|INFO|KeldyshPreprintSystem.MvcApplication|Application Error

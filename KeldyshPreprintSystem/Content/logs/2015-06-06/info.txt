@@ -1,0 +1,93 @@
+2015-06-06 04:42:12.9939|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-06-06 16:50:33.1580|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-06 16:50:42.6217|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-06 16:50:42.7148|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-06 16:50:42.7348|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-06 16:50:43.5454|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-06-06 16:50:44.3203|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-06-06 16:50:51.9254|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-06 16:50:53.7300|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-06 16:50:53.7881|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-06 16:50:53.7971|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-06 16:50:54.1192|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-06-06 16:52:07.5778|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-06-06 16:54:39.4874|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-06-06 16:54:46.3700|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-06 16:54:49.9216|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-06 16:54:50.0366|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-06 16:54:50.0546|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-06 16:54:50.6668|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-06-06 16:56:49.2884|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: 96603c72-e847-47f0-9dae-fd5e17c7ed8d
+2015-06-06 16:56:49.2965|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:True
+2015-06-06 17:08:41.1900|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-06-06 17:08:52.5008|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-06 17:08:55.0337|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-06 17:08:55.0787|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-06 17:08:55.0787|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-06 17:08:55.3061|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-06-06 17:08:55.5184|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-06-06 17:09:00.2609|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-06 17:09:02.9619|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-06 17:09:03.0490|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-06 17:09:03.0630|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-06 17:09:03.6147|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-06-06 17:12:39.1204|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-06 17:12:43.3560|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-06 17:12:43.4891|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-06 17:12:43.4971|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-06 17:12:44.0501|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-06-06 17:12:45.0391|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-06-06 17:12:52.7862|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-06 17:12:54.3617|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-06 17:12:54.4147|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-06 17:12:54.4217|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-06 17:12:54.7288|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-06-06 19:47:45.8963|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-06-06 19:47:50.7262|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-06 19:47:51.5521|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-06 19:47:51.5851|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-06 19:47:51.5901|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-06 19:47:51.7531|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-06-06 19:47:52.0270|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-06-06 19:48:02.5966|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-06 19:48:03.0875|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-06 19:48:03.1085|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-06 19:48:03.1085|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-06 19:48:03.2955|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-06-06 19:49:37.1163|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-06-06 19:49:39.0214|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-06 19:49:39.8297|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-06 19:49:39.8537|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-06 19:49:39.8577|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-06 19:49:40.0453|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-06-06 19:49:40.3204|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-06-06 19:49:46.6163|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-06 19:49:47.3316|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-06 19:49:47.3316|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-06 19:49:47.3406|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-06 19:49:47.4676|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-06-06 19:57:09.5252|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-06-06 19:57:11.3224|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-06 19:57:11.9434|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-06 19:57:11.9434|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-06 19:57:11.9494|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-06 19:57:12.0494|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-06-06 19:57:12.2165|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-06-06 19:57:29.2370|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-06 19:57:29.9458|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-06 19:57:29.9548|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-06 19:57:29.9818|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-06 19:57:30.0589|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-06-06 20:38:03.4134|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-06-06 20:59:10.2740|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-06 20:59:11.2941|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-06 20:59:11.3252|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-06 20:59:11.3252|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-06 20:59:11.5052|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-06-06 20:59:11.6673|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-06-06 20:59:25.1271|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-06 20:59:25.6838|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-06 20:59:25.7068|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-06 20:59:25.7068|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-06 20:59:25.8858|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-06-06 21:02:44.3454|INFO|KeldyshPreprintSystem.MvcApplication|Application End

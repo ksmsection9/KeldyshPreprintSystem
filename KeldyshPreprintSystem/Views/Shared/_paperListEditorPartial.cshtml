@@ -1,0 +1,199 @@
+﻿@{
+    var controller = ViewContext.RouteData.GetRequiredString("controller");
+    var action = ViewContext.RouteData.GetRequiredString("action");
+    var area = ViewContext.RouteData.DataTokens["area"];
+    List<KeldyshPreprintSystem.Models.PaperSubmissionModel> papers = Model as List<KeldyshPreprintSystem.Models.PaperSubmissionModel>;
+    bool anyClosed = false;
+    string currentRole = KeldyshPreprintSystem.Tools.AccountHelper.GetUserRole(WebSecurity.CurrentUserId);
+}
+
+@*active submissions*@
+@foreach (var paper in papers)
+{
+    HashSet<string> rolesOnActions = new HashSet<string>();
+    if (!KeldyshPreprintSystem.Tools.EditorHelper.IsSubmissionClosed(paper.submissionState))
+    {
+        string[] actions = KeldyshPreprintSystem.Tools.EditorHelper.GetPossibleActions(paper.submissionState);
+        string cyrillicId = KeldyshPreprintSystem.Tools.PaperSubmissionControllerHelper.GetCyrillicId(paper.Id);
+        KeldyshPreprintSystem.Models.PanelContextModel context = KeldyshPreprintSystem.Tools.PanelHelper.GetContext(paper.Id);
+        foreach (string s in actions)
+        {
+            string[] paramArray = s.Split(':');
+            string role = paramArray[0];
+            rolesOnActions.Add(role);
+        }
+
+        if (currentRole != "user" || paper.Owner == WebSecurity.CurrentUserName)
+        {
+    <div id="paper_@paper.Id" >
+        <p style="font-size: large; font-weight: 500; margin-top: 0px; display: inline;">Заявка №</p>
+        <p style="font-size: large; font-weight: 500; margin-top: 5px; display: inline;">
+            @cyrillicId
+        </p>
+        <div id="@paper.Id" class="linkBox">
+            @foreach (KeldyshPreprintSystem.Models.Author author in paper.Authors)
+            {
+                //string name = author.FirstnameRussian.FirstOrDefault() + "." + (author.PatronymRussian != null ? author.PatronymRussian.FirstOrDefault() + "." : string.Empty) + " " + author.LastnameRussian;
+                string name = author.FirstnameRussian + " " + author.PatronymRussian + " " + author.LastnameRussian;
+                @name
+                if (paper.Authors.Last().Id != author.Id)
+                {           
+                @Html.Raw(", ");
+                }
+            }
+            <h3 style="margin: 0px;">@paper.TitleRussian</h3>
+            <div id="statusInfo" style="margin: 0px;">
+                <p style="font-style: italic; margin: auto;">Заявка была подана @paper.submissionDate.Replace(" ", " в ") пользователем @paper.Owner</p>
+                <p style="font-weight: 600; margin-bottom: 0px; display: inline;">Нынешний статус заявки @paper.submissionState:</p>
+                <p style="margin-top: 5px; display: inline;">
+                    @KeldyshPreprintSystem.Tools.EditorHelper.GetStatusDescription(paper.submissionState)
+                </p>
+                <p style="font-style: italic; margin: auto;">Последнее обновление статуса: @paper.lastStatusChangeDate</p>
+
+            </div>
+            <p style="font-weight: 600; margin-bottom: 0px; display: inline;">Ответственный автор:</p>
+            <p style="font-style: normal; margin: auto; display: inline;">@paper.ContactName, тел. @paper.ContactPhone</p>
+        </div>
+        @*end of click div*@
+
+        <div style="display: inline-block;">
+            @if (rolesOnActions.Contains(currentRole))
+            {
+                <p>На данный момент по заявке ожидается ваше действие.</p>
+            }
+            else
+            {
+                if (rolesOnActions.Contains("user"))
+                {
+                <p>На данный момент по заявке ожидается действие автора.</p>  
+                }
+                else
+                {
+                    string translation = "";
+                    foreach (string role in rolesOnActions)
+                    {
+                        translation += (KeldyshPreprintSystem.Tools.AccountHelper.GetRoleTranslation(role)) + "а";
+                    }
+                <p>На данный момент по заявке ожидается действие редакции (@translation).</p> 
+                }
+            }
+            <br />
+        </div>
+        @*       <div id="smsDivInfo_@paper.Id" style="display: inline-block;">
+            @if (context.smsForbidden)
+            {
+                <p>СМС-оповещение для этой заявки отключено</p>
+            }
+            else
+            {
+                <p>СМС-оповещение для этой заявки включено</p>
+            }
+        </div>*@
+
+        <div style="text-align: left; float: right">
+            @if (currentRole == "user")
+            {
+                string smsForbiddenText = context.smsForbidden ? "Включить смс-оповещение" : "Отключить смс-оповещение";
+                <a href="#" id="toggleSmsLink_@paper.Id" class="link-dot" onclick="ToggleSms(@paper.Id);">@smsForbiddenText</a>
+                //<label>Запретить смс?</label>@Html.CheckBox(paper.Id.ToString(), context.smsForbidden);
+                <br />
+            }
+
+            @Html.ActionLink("Управление заявкой", "Manage", new { area = area, controller = controller, id = paper.Id })
+            <br />
+            @if (currentRole == "admin" || (currentRole == "user" && paper.Owner == WebSecurity.CurrentUserName))
+            {
+                <a href="~/Editor/Edit/Submission?id=@paper.Id">Редактирование заявки</a>
+                <br />
+            }
+
+            @if (currentRole == "admin")
+            {
+                <a href="~/Editor/Edit/Delete?paperId=@paper.Id"  onclick="return confirm('Действительно удалить заявку?');" class="link-dot">Удалить заявку</a>
+                <br />
+            }
+
+            <a href="#" onclick="askForId(@paper.Id);" class="link-dot">Скачать обложку (.pdf)</a>
+            <br />
+
+        </div>
+    </div> 
+    <hr />
+        }
+    }
+    else
+    {
+        anyClosed = true;
+    }
+}
+<br />
+
+@if (anyClosed)
+{
+    <h3>Закрытые заявки</h3>
+@*closed submissions*@
+    foreach (var paper in papers)
+    {
+        if (KeldyshPreprintSystem.Tools.EditorHelper.IsSubmissionClosed(paper.submissionState))
+        {
+            string[] actions = KeldyshPreprintSystem.Tools.EditorHelper.GetPossibleActions(paper.submissionState);
+            string cyrillicId = KeldyshPreprintSystem.Tools.PaperSubmissionControllerHelper.GetCyrillicId(paper.Id);
+
+            foreach (string s in actions)
+            {
+                string[] paramArray = s.Split(':');
+                string role = paramArray[0];
+                if (currentRole == role)
+                {
+                    break;
+                }
+            }
+            if (currentRole != "user" || paper.Owner == WebSecurity.CurrentUserName)
+            {
+    <div id="closed_paper_@paper.Id">
+        @Html.ActionLink("Управление заявкой №" + cyrillicId, "Manage", new { area = area, controller = controller, id = paper.Id })
+        @*        <table>
+            <tr>
+                @if (actionsAvailable || currentRole == "admin")
+                {
+                    <td>Доступны действия по заявке.
+                    </td>
+                }
+            </tr>
+        </table>*@
+    </div> 
+    <hr />
+            }
+        }
+    }
+}
+
+<script>
+    function ToggleSms(paperId) {
+        $.get("@Url.Action("ToggleSms", "Panel", new { area = "", controller = "Panel" }, "https")" + "?anticache=@Guid.NewGuid().ToString()" + "&paperId=" + paperId);
+        if ($("#toggleSmsLink_" + paperId).text().indexOf("Включить") > -1) {
+            $("#toggleSmsLink_" + paperId).html('Отключить смс-оповещение');
+        }
+        else {
+            $("#toggleSmsLink_" + paperId).html('Включить смс-оповещение');
+        }
+    }
+
+    function askForId(paperId) {
+        var libraryId = prompt("Пожалуйста, введите идентификатор препринта в библиотеке ИПМ", "999");
+        if (libraryId != null) {
+            window.location.href = "@Url.Action("GetFrontCoverPdf", "Panel", new { area = "", controller = "Panel" }, "https")" + "?anticache=@Guid.NewGuid().ToString()" + "&paperId=" + paperId + "&libraryId=" + libraryId;
+        }
+        else
+            alert("Идентификатор не был задан.");
+    }
+
+    $('input[type="checkbox"]').change(function () {
+        $.get("@Url.Action("ToggleSms", "Panel", new { area = "", controller = "Panel" }, "https")" + "?anticache=@Guid.NewGuid().ToString()" + "&paperId=" + $(this).attr('name'));
+    });
+
+    $(".linkBox").click(function () {
+        window.location = "@Url.Action("Manage", "Panel", new { area = area, controller = controller }, "https")?id=" + $(this).attr("id")
+        return false;
+    });
+</script>

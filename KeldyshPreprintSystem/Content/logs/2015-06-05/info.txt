@@ -1,0 +1,21 @@
+2015-06-05 23:24:54.7516|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-05 23:24:57.3866|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-05 23:24:57.4096|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-05 23:24:57.4096|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-05 23:24:57.5274|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-06-05 23:25:06.5325|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-06-05 23:25:16.2996|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: admin@localhost.localhost admin
+2015-06-05 23:25:20.4385|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-06-05 23:25:33.8978|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: author@localhost.localhost user
+2015-06-05 23:46:43.2444|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-06-05 23:46:48.7975|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-05 23:46:49.4582|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-05 23:46:49.4582|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-05 23:46:49.4843|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-05 23:46:49.5683|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-06-05 23:46:52.1185|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-06-05 23:46:52.8886|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-06-05 23:46:54.1219|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-06-05 23:46:54.1219|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-06-05 23:46:54.1419|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-06-05 23:46:54.2759|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5

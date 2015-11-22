@@ -1,0 +1,121 @@
+﻿@{
+    KeldyshPreprintSystem.Models.PaperSubmissionModel paper = Model as KeldyshPreprintSystem.Models.PaperSubmissionModel;
+    string[] actions = KeldyshPreprintSystem.Tools.EditorHelper.GetPossibleActions(paper.submissionState);
+    string currentRole = KeldyshPreprintSystem.Tools.AccountHelper.GetUserRole(WebSecurity.CurrentUserId);
+    bool isAnyActions = false;
+}
+<div id="submissionActions_@paper.Id" style="overflow:auto;">
+    <div id="cssactionmenu">
+        <ul>
+            @*    @if (currentRole == "admin")
+        {
+            <li><a href="#" onclick="$.ajax('@Url.Action("ResetStatus", "Panel", new { area = "", controller = "Panel", id = paper.Id }, "https")?anticache=@Guid.NewGuid().ToString()');">Сбросить статус к начальному значению.</a>
+            </li>
+        }*@
+
+            @foreach (string s in actions)
+            {
+                string[] paramArray = s.Split(':');
+                string role = paramArray[0];
+                string action = paramArray[1];
+                string description = paramArray[2];
+                if (role == currentRole)// || currentRole == "admin")
+                {
+                    isAnyActions = true;
+                <li>
+                    @if (KeldyshPreprintSystem.Tools.EditorHelper.IsMessageNeeded(action))
+                    {
+                        if (KeldyshPreprintSystem.Tools.EditorHelper.IsFileNeeded(action))
+                        {
+                        <a href="#" onclick="updatePartialWithCorrector('@Url.Action(action, "Panel", new { area = "", controller = "Panel", id = paper.Id }, "https")?anticache=@Guid.NewGuid().ToString()');">@description</a>  
+                        }
+                        else
+                        {
+                        <a href="#" onclick="updatePartialWithMessage('@Url.Action(action, "Panel", new { area = "", controller = "Panel", id = paper.Id }, "https")?anticache=@Guid.NewGuid().ToString()');">@description</a>
+                        }
+                    }
+                    else
+                    {
+                        <a href="#" onclick="updatePartial('@Url.Action(action, "Panel", new { area = "", controller = "Panel", id = paper.Id }, "https")?anticache=@Guid.NewGuid().ToString()');">@description</a>
+                    }
+                </li>
+                }
+            }
+
+            @if (!isAnyActions)// && currentRole != "admin")
+            {
+                <li>Нет доступных действий по заявке</li>
+            }
+        </ul>
+    </div>
+</div>
+
+
+<script>
+    function updatePartialWithCorrector(url) {
+        //TODO: NOT IMPLEMENTED YET
+        //script for updating state which need corrector to upload his materials before moving to this state
+        var attachmentFlag = $('#uploadedFileInfo').val();//implement check for uploaded file and store it somewhere
+        if (attachmentFlag.trim() === "") {
+            $("#cssactionmenu").notify("Необходимо прикрепить файл корректуры прежде чем переходить на данный статус!", { position: "right", className: "error", autoHideDelay: 5000 });
+            $("#fileUploadDiv").notify("Пожалуйста, прикрепите файл корректуры !", { position: "bottom center", className: "error", autoHideDelay: 10000 });
+            return;
+        }
+        else
+            console.log('attachmentFlag: '+attachmentFlag);
+
+        var message = $('#chatInput').bbcode().trim();
+        if (message.length < 2) {
+            //alert('Необходимо ввести сообщение для перехода на данный статус!'); 
+            $("#cssactionmenu").notify("Необходимо ввести сообщение для перехода на данный статус!", { position: "right", className: "error", autoHideDelay: 5000 });
+            $("#logSendBox").notify("Пожалуйста, введите сообщение!", { position: "top center", className: "error", autoHideDelay: 10000 });
+            $("#sendMessageBtn").html("Отправить и перейти на новый статус");
+            $("#sendMessageBtn").attr("onclick", "updatePartialWithCorrector(\"" + url + "\");");
+            return;
+        }
+
+        var w = $('#submissionActions_@paper.Id').width();
+        var h = $('#submissionActions_@paper.Id').height();
+        $('#submissionActions_@paper.Id').html('<img style="dislay:block; margin: 0 auto;" src="@Url.Content("~/Content/ajax-loader.gif")"></img>').width(w).height(h);
+
+        $("#sendMessageBtn").html("Отправить");
+        $("#sendMessageBtn").attr("onclick", "sendMessage();");
+
+        loadOnce = false;//global var from Manage.cshtml; setting to false makes actualVersionPartial to update
+        $.ajax(url + "?message=" + encodeURIComponent(message));
+        sendMessage();
+    }
+
+    function updatePartialWithMessage(url) {
+        //script for updating state which need message to be entered before moving to this state
+        var message = $('#chatInput').bbcode().trim();
+        if (message.length < 2) {
+            //alert('Необходимо ввести сообщение для перехода на данный статус!'); 
+            $("#cssactionmenu").notify("Необходимо ввести сообщение для перехода на данный статус!", { position: "right", className: "error", autoHideDelay: 5000 });
+            $("#logSendBox").notify("Пожалуйста, введите сообщение!", { position: "top center", className: "error", autoHideDelay: 10000 });
+            $("#sendMessageBtn").html("Отправить и перейти на новый статус");
+            $("#sendMessageBtn").attr("onclick", "updatePartialWithMessage(\"" + url + "\");");
+            return;
+        }
+
+        var w = $('#submissionActions_@paper.Id').width();
+        var h = $('#submissionActions_@paper.Id').height();
+        $('#submissionActions_@paper.Id').html('<img style="dislay:block; margin: 0 auto;" src="@Url.Content("~/Content/ajax-loader.gif")"></img>').width(w).height(h);
+
+        $("#sendMessageBtn").html("Отправить");
+        $("#sendMessageBtn").attr("onclick", "sendMessage();");
+
+        loadOnce = false;//global var from Manage.cshtml; setting to false makes actualVersionPartial to update
+        $.ajax(url + "?message=" + encodeURIComponent(message));
+        sendMessage();
+    }
+
+    function updatePartial(url) {
+        var w = $('#submissionActions_@paper.Id').width();
+        var h = $('#submissionActions_@paper.Id').height();
+        $('#submissionActions_@paper.Id').html('<img style="dislay:block; display: block; margin: 0 auto;" src="@Url.Content("~/Content/ajax-loader.gif")"></img>').width(w).height(h);
+        loadOnce = false;//global var from Manage.cshtml; setting to false makes actualVersionPartial to update
+        $.ajax(url);
+    }
+</script>
+

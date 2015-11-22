@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<MailInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Subject>РЈС‚РѕС‡РЅРµРЅРЅС‹Р№ РїСЂРµРїСЂРёРЅС‚: @firstauthor@</Subject>
+  <Body>РџРѕСЃС‚СѓРїРёР» СѓС‚РѕС‡РЅРµРЅРЅС‹Р№ РїСЂРµРїСЂРёРЅС‚
+@allauthors@
+@title@
+
+@authortext@</Body>
+  <From>shirokiy@keldysh.ru</From>
+  <To>toEditor</To>
+  <Attachments>
+    <string>ReplaceForPathToPaper</string>
+    <string>ReplaceForPathToSubmission</string>
+  </Attachments>
+  <HourInterval>24</HourInterval>
+  <IsClosed>false</IsClosed>
+  <PaperId>-1</PaperId>
+  <StateId>3</StateId>
+  <CreationDate>2015-04-17T12:21:00.619+04:00</CreationDate>
+  <Id>StatusMailTemplate</Id>
+</MailInfo>

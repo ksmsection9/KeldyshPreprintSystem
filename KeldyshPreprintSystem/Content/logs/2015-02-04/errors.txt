@@ -1,0 +1,1 @@
+2015-02-04 19:01:29.0741|ERROR|KeldyshPreprintSystem.Tools.SMSSender|Sms sending error: Unrecognized sms service response: empty field. reject number: 71112233 message: Новый препринт: В.П. Проверка

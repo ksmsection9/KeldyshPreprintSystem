@@ -1,0 +1,219 @@
+﻿@{
+    var versionHistory = KeldyshPreprintSystem.Tools.UploadsManager.GetVersionHistory(Model.Id);
+    var versionKeys = versionHistory.Keys;
+    int maxKey = Int32.MinValue;
+    string currentRole = KeldyshPreprintSystem.Tools.AccountHelper.GetUserRole(WebSecurity.CurrentUserId);
+    string correctionFlag = "";
+}
+<table>
+    <tr>
+        <td>
+            <div id="actualVersion" style="height: 100px; width: 250px; overflow-y: auto; overflow-x: auto;">
+
+                @foreach (var key in versionKeys)
+                {
+                    if (key > maxKey)
+                    {
+                        maxKey = key;
+                    }
+                }
+
+                @if (maxKey >= 0)
+                {
+                    KeldyshPreprintSystem.Tools.PaperVersionInfo lastInfo = versionHistory[maxKey];
+                    <div id="fileDownloadDiv" style="height: 100px; vertical-align: middle; overflow: hidden;">
+                        @if (lastInfo.PaperCorrection)
+                        {
+                            correctionFlag = "something useful";
+                            <a class="sumbitSubmissionBtn" href="#" style="height:80%; text-align:center;" onclick="window.open('https://'+window.location.host+'/Editor/Edit/DownloadFile?paperId='+@Model.Id+'&versionId='+@maxKey, '_blank')">Актуальная версия @(lastInfo.ToString()) (Корректура)</a>
+                        }
+                        else
+                        {
+                            <a class="sumbitSubmissionBtn" href="#" style="height:80%; text-align:center;" onclick="window.open('https://'+window.location.host+'/Editor/Edit/DownloadFile?paperId='+@Model.Id+'&versionId='+@maxKey, '_blank')">Актуальная версия @(lastInfo.ToString()) (Препринт)</a>
+                        }
+                    </div>
+                }
+            </div>
+        </td>
+        <td>
+            <div id="fileUploadDiv" class="dropzone" style="width: 100%; height: 100px; min-width: 300px;">
+                <div class="fallback"></div>
+            </div>
+            <input type="hidden" id="uploadedFileInfo" value="@ViewBag.UploadedInfo"/></td>
+    </tr>
+    <tr>
+        <td>
+            <a id="allFileVersionsLink" href="#" onclick="showAllVersions();" class="link-dot">Посмотреть все файлы</a>
+            <div id="allFileVersions" style="position:fixed; display:none; border: 1px solid  black; background-color: aliceblue; overflow:auto;">
+                @foreach (var key in versionKeys)
+                {
+                    if (key > maxKey)
+                    {
+                        maxKey = key;
+                    }
+                }
+                @if (maxKey >= 0)
+                {
+                    KeldyshPreprintSystem.Tools.PaperVersionInfo lastInfo = versionHistory[maxKey];
+                    if (lastInfo.PaperCorrection)
+                    {
+                        correctionFlag = "something useful";
+    
+                    <a href="#"  onclick="window.open('https://'+window.location.host+'/Editor/Edit/DownloadFile?paperId='+@Model.Id+'&versionId='+@maxKey, '_blank')">Актуальный файл @(lastInfo.ToString()) (Корректура)</a>
+                    }
+                    else
+                    {
+          
+                    <a href="#"  onclick="window.open('https://'+window.location.host+'/Editor/Edit/DownloadFile?paperId='+@Model.Id+'&versionId='+@maxKey, '_blank')">Актуальная версия @(lastInfo.ToString()) (Препринт)</a>
+         
+                    }
+                }
+                @for (int key = maxKey - 1; key >= 0; key--)
+                {
+                    KeldyshPreprintSystem.Tools.PaperVersionInfo v = null;
+                    <br />
+                    if (versionHistory.TryGetValue(key, out v))
+                    {
+                        if (v.PaperCorrection == true)
+                        {
+                    <a href="#"  onclick="window.open('https://'+window.location.host+'/Editor/Edit/DownloadFile?paperId='+@Model.Id+'&versionId='+@key, '_blank')">@(v.ToString()) (Корректура)</a>
+                        }
+                        else
+                        {     
+                    <a href="#"  onclick="window.open('https://'+window.location.host+'/Editor/Edit/DownloadFile?paperId='+@Model.Id+'&versionId='+@key, '_blank')">@(v.ToString())</a>      
+                        }
+                    }
+                }
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+<script>
+    function showAllVersions() {
+        $("#allFileVersions").show();
+        $("#allFileVersionsLink").html("Убрать cписок файлов");
+        $("#allFileVersionsLink").attr("onclick", "hideAllVersions();");
+    }
+
+    function hideAllVersions() {
+        $("#allFileVersions").hide();
+        $("#allFileVersionsLink").html("Посмотреть все файлы");
+        $("#allFileVersionsLink").attr("onclick", "showAllVersions();");
+    }
+</script>
+
+@if (currentRole != "corrector")
+{
+    <script>
+        $(function () {
+            // Now that the DOM is fully loaded, create the dropzone, and setup the
+            // event listeners
+            Dropzone.autoDiscover = false;
+            var myDropzone = $("#fileUploadDiv").dropzone({
+                url: "/FileUpload/UpdatePreprintVersion?paperId=@Model.Id",
+                maxFiles: 1,
+                dictDefaultMessage: "Для загрузки очередной версии файла препринта перетащите сюда файл препринта или кликните на этом сером прямоугольнике",
+                dicMaxFilesExceeded: "Можно загрузить только один файл",
+                dictInvalidFileType: "Недопустимое расширение файла. Допустимые расширения: .doc, .docx и .pdf.",
+                dictRemoveFile: "Удалить файл",
+                dictCancelUpload: "Прекратить загрузку",
+                dictCancelUploadConfirmation: "Подтвердите прекращение загрузки",
+                acceptedFiles: ".doc, .docx, .pdf",
+                addRemoveLinks: true,
+                uploadMultiple: false,
+                accept: function (file, done) {
+                    if (confirm('В самом деле загрузить скорректированный файл?')) {
+                        done();
+                    }
+                    else {
+                        done("Загрузка отменена");
+                    }
+                },
+
+                init: function () {
+                    this.on("addedfile", function () {
+                        if (this.files[1] != null) {
+                            this.removeFile(this.files[0]);
+                        }
+                        var w = $('#fileVersions').width();
+                        var h = $('#fileVersions').height();
+                        $('#fileVersions').html('<img style="dislay:block; display: block; margin: 0 auto;" src="@Url.Content("~/Content/ajax-loader.gif")"></img>').width(w).height(h);
+                    });
+
+                    this.on("removedfile", function (file) {
+                        /* Maybe display some more file information on your page */
+                        var url = "/FileUpload/DeleteUploadedFile";
+                        $.get(url, null, function (data) {
+                        });
+                    });
+
+                    this.on("maxfilesexceeded", function (file) { this.removeFile(file); });
+
+                    if ($('#uploadedFileInfo').val() != '') {
+                        var mockFile = { name: "Вы уже загрузили файл", size: parseInt($('#uploadedFileInfo').val()) };
+                        this.emit("addedfile", mockFile);
+                    }
+                }
+            });
+        })
+    </script>
+}
+else
+{
+    <script>
+        $(function () {
+            // Now that the DOM is fully loaded, create the dropzone, and setup the
+            // event listeners
+            Dropzone.autoDiscover = false;
+            var myDropzone = $("#fileUploadDiv").dropzone({
+                url: "/FileUpload/UpdateCorrectorFile?paperId=@Model.Id",
+                maxFiles: 1,
+                dictDefaultMessage: "Для загрузки очередной версии корректуры перетащите сюда файл препринта или кликните на этом сером прямоугольнике",
+                dicMaxFilesExceeded: "Можно загрузить только один файл",
+                dictInvalidFileType: "Недопустимое расширение файла. Допустимые расширения: .doc, .docx и .pdf.",
+                dictRemoveFile: "Удалить файл",
+                dictCancelUpload: "Прекратить загрузку",
+                dictCancelUploadConfirmation: "Подтвердите прекращение загрузки",
+                acceptedFiles: ".doc, .docx, .pdf",
+                addRemoveLinks: true,
+                uploadMultiple: false,
+                accept: function (file, done) {
+                    if (confirm('В самом деле обновить файл корректуры?')) {
+                        done();
+                    }
+                    else {
+                        done("Загрузка отменена");
+                    }
+                },
+
+                init: function () {
+                    this.on("addedfile", function () {
+                        if (this.files[1] != null) {
+                            this.removeFile(this.files[0]);
+                        }
+                        $('#uploadedFileInfo').val("not empty");
+                        var w = $('#fileVersions').width();
+                        var h = $('#fileVersions').height();
+                        $('#fileVersions').html('<img style="dislay:block; display: block; margin: 0 auto;" src="@Url.Content("~/Content/ajax-loader.gif")"></img>').width(w).height(h);
+                    });
+
+                    this.on("removedfile", function (file) {
+                        /* Maybe display some more file information on your page */
+                        var url = "/FileUpload/DeleteUploadedFile";
+                        $.get(url, null, function (data) {
+                        });
+                    });
+
+                    this.on("maxfilesexceeded", function (file) { this.removeFile(file); });
+
+                    if ($('#uploadedFileInfo').val() != '') {
+                        var mockFile = { name: "Вы уже загрузили файл", size: parseInt($('#uploadedFileInfo').val()) };
+                        this.emit("addedfile", mockFile);
+                    }
+                }
+            });
+        })
+    </script>
+}

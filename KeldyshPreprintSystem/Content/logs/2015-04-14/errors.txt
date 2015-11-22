@@ -1,0 +1,19 @@
+2015-04-14 00:25:59.6734|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionFailure sending mail.
+2015-04-14 00:26:03.1774|ERROR|KeldyshPreprintSystem.Tools.SMSSender|Sms sending error: Unrecognized sms service response: incorrect destination adress. reject number: 70000000000 message: Уважаемый  Олег! Заявка на публикацию препринта "Тестовый препринт" принята под номером 1!
+2015-04-14 00:26:03.3700|ERROR|KeldyshPreprintSystem.Tools.SMSSender|Sms sending error: Unrecognized sms service response: incorrect destination adress. reject number: 79991112233 message: Новый препринт: Р.В. Широкий
+2015-04-14 00:35:03.8958|ERROR|KeldyshPreprintSystem.Tools.SMSSender|Sms sending error: Unrecognized sms service response: empty field. reject number: 0000000000 message: 2
+2015-04-14 00:35:24.9265|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionFailure sending mail.
+2015-04-14 00:42:33.2215|ERROR|KeldyshPreprintSystem.Tools.SMSSender|Sms sending error: Unrecognized sms service response: empty field. reject number: 0000000000 message: 2
+2015-04-14 00:42:54.3460|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionFailure sending mail.
+2015-04-14 00:45:13.8593|ERROR|KeldyshPreprintSystem.Tools.SMSSender|Sms sending error: Unrecognized sms service response: empty field. reject number: 0000000000 message: 2
+2015-04-14 00:45:35.1201|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionFailure sending mail.
+2015-04-14 00:47:20.4145|ERROR|KeldyshPreprintSystem.Tools.SMSSender|Sms sending error: Unrecognized sms service response: empty field. reject number: 0000000000 message: 2
+2015-04-14 00:47:41.6213|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionFailure sending mail.
+2015-04-14 00:47:59.6652|ERROR|KeldyshPreprintSystem.Tools.SMSSender|Sms sending error: Unrecognized sms service response: empty field. reject number: 0000000000 message: 2
+2015-04-14 00:48:20.8022|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionFailure sending mail.
+2015-04-14 00:48:59.8180|ERROR|KeldyshPreprintSystem.Tools.SMSSender|Sms sending error: Unrecognized sms service response: empty field. reject number: 0000000000 message: 2
+2015-04-14 00:49:21.0359|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionFailure sending mail.
+2015-04-14 00:49:45.0986|ERROR|KeldyshPreprintSystem.Tools.SMSSender|Sms sending error: Unrecognized sms service response: empty field. reject number: 0000000000 message: 2
+2015-04-14 00:50:06.2995|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionFailure sending mail.
+2015-04-14 00:50:46.9536|ERROR|KeldyshPreprintSystem.Tools.SMSSender|Sms sending error: Unrecognized sms service response: empty field. reject number: 0000000000 message: 2
+2015-04-14 00:51:08.0454|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionFailure sending mail.

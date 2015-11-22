@@ -1,0 +1,61 @@
+﻿@model KeldyshPreprintSystem.Models.LoginModel
+
+@{
+    ViewBag.Title = "Препринты ИПМ им.М.В.Келдыша. Вход для тестирования";
+}
+
+<div style="text-align: center; width: 100%;">
+    @if (ViewBag.AfterRegistration)
+    {
+        <h2 style="color:red">На указанный адрес электронной почты отправлено письмо для подтверждения регистрации.</h2>
+        <h4>Если вы не получили письмо со ссылкой, то проверьте папку спам.</h4>
+        <h4>Для повторной отправки письма попытайтесь войти в систему, используя данные вашей учетной записи.</h4>
+    }
+
+    @if (ViewBag.AfterConfirmationSuccess)
+    {
+        <h2>Учетная запись подтверждена!</h2>
+    }
+
+    @if (ViewBag.AfterConfirmationFailure)
+    {
+        <h2>Ошибка подтверждения учетной записи!</h2>
+    }
+    <div id="loginField" class="centerPageDiv">
+        <h2>Препринты ИПМ им.М.В.Келдыша</h2>
+        <h3>Вход для тестирования</h3>
+        @Html.ValidationSummary("Не удалось войти.")
+        <div class="centerDiv">
+            @using (Html.BeginForm(null, null, new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { style = "width:100%;" }))
+            {
+                @Html.AntiForgeryToken()
+                <table style="position: absolute; width: 370px; margin-left: -185px; left: 50%;">
+                    <tr>
+                        <td style="width: 170px;">
+                            @Html.LabelFor(m => m.Email, new { style = "font-weight:normal;" }):
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(m => m.Email, new { style = "width:98%" })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.LabelFor(m => m.Password, new { style = "font-weight:normal;" }):
+                        </td>
+                        <td>
+                            @Html.PasswordFor(m => m.Password, new { style = "width:98%" })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2">
+                            <input type="submit" value="Войти" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="font-size: 12px;">@Html.ActionLink("Зарегистрироваться", "Register") @Html.ActionLink("Забыли пароль?", "ResetPassword")</td>
+                    </tr>
+                </table>    
+            }
+        </div>
+    </div>
+</div>

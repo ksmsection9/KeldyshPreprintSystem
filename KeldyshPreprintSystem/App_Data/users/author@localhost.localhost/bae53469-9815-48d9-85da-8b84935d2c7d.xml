@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<PaperSubmissionModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Reviewer>
+    <Patronym>xxx</Patronym>
+  </Reviewer>
+  <TitleRussian>xvcxcvxc</TitleRussian>
+  <TitleEnglish>xcvxcv</TitleEnglish>
+  <KeywordsRussian>cvxcv;xvcxcv</KeywordsRussian>
+  <KeywordsEnglish>xcvx</KeywordsEnglish>
+  <NumberOfPages>0</NumberOfPages>
+  <NumberOfAuthorsCopies>0</NumberOfAuthorsCopies>
+  <FieldOfResearch>Unselected</FieldOfResearch>
+  <submissionState>0</submissionState>
+  <submissionDate>2015.08.30 18:46</submissionDate>
+  <lastStatusChangeDate>2015.08.30 18:46</lastStatusChangeDate>
+  <Owner>author@localhost.localhost</Owner>
+</PaperSubmissionModel>	
+	
+	
+	<?xml version="1.0"?>
+<ArrayOfAuthor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Author>
+    <FirstnameRussian>fdgdfgd</FirstnameRussian>
+    <FirstnameEnglish>jkjjk</FirstnameEnglish>
+    <LastnameEnglish>kjjkj</LastnameEnglish>
+    <PatronymEnglish>kkj</PatronymEnglish>
+    <Email>jkjk</Email>
+    <PersonalWeb>jkjkkjk</PersonalWeb>
+    <PlaceOfWork>jkjkj</PlaceOfWork>
+    <SPIN>lk;k</SPIN>
+    <ResearcherID>klk</ResearcherID>
+  </Author>
+</ArrayOfAuthor>	
+	
+	
+	56643102-c3e2-40f8-b9e5-976ba2e506e0;C:\Users\rshiroki\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem\App_Data\converted\56643102-c3e2-40f8-b9e5-976ba2e506e0.pdf

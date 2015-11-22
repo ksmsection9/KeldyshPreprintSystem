@@ -1,0 +1,18 @@
+﻿@{
+    KeldyshPreprintSystem.Models.PaperSubmissionModel paper = Model as KeldyshPreprintSystem.Models.PaperSubmissionModel;
+    string currentRole = KeldyshPreprintSystem.Tools.AccountHelper.GetUserRole(WebSecurity.CurrentUserId);
+}
+<div id="submissionActions_@paper.Id" >
+    <div id="cssactionmenu">
+        <ul>
+            <li><a href="~/Editor/Edit/Submission?id=@paper.Id">Редактировать</a>
+            </li>
+            <li><a href="~/PaperSubmission/Download?id=@paper.Id&type=docx" class="link-dot">Скачать (.docx)</a>
+            </li>
+            <li><a href="~/PaperSubmission/Download?id=@paper.Id&type=pdf" class="link-dot">Скачать (.pdf)</a>
+            </li>
+            <li><a href="~/PaperSubmission/Download?id=@paper.Id&forcorrector=true" class="link-dot">Скачать (версия для корректора)</a>
+            </li>
+        </ul>
+    </div>
+</div>

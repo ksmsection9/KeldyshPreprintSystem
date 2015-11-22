@@ -1,0 +1,43 @@
+﻿@model KeldyshPreprintSystem.Models.LoginModel
+@{
+    ViewBag.Title = "Регистрация автора препринта";
+}
+
+
+<div style="text-align: center; width: 100%;">
+    <div id="registrationField" class="centerPageDiv">
+
+        <h2>Регистрация автора, ответственного за издание препринта</h2>
+        @Html.ValidationSummary()
+
+
+        <div style="text-align: right;" class="centerDiv">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <table>
+                    <tr>
+                        <td>@Html.LabelFor(m => m.Email, new { style = "font-weight:normal;" }):</td>
+                        <td>
+                            <div class="spanBlockSmaller"></div>
+                        </td>
+                        <td>@Html.TextBoxFor(m => m.Email, new { style = "width:100%" })</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.LabelFor(m => m.Password, new { style = "font-weight:normal;" }):</td>
+                        <td>
+                            <div class="spanBlockSmaller"></div>
+                        </td>
+                        <td>@Html.PasswordFor(m => m.Password, new { style = "width:100%" })</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td colspan="2"><input type="submit" style=" margin-top: 12px; margin-left:2px; width:100%" class="sumbitSubmissionBtn" value="Зарегистрироваться" /></td>
+                    </tr>
+                </table>
+                <br />
+            }
+        </div>
+    </div>
+</div>

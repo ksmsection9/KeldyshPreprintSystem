@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<MailInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Subject>РџСЂРµРїСЂРёРЅС‚ СЂР°Р·РјРµС‰РµРЅ РІ eLibrary</Subject>
+  <Body>РџСЂРµРїСЂРёРЅС‚
+@allauthors@
+@title@
+
+РЈРІР°Р¶Р°РµРјС‹Рµ Р°РІС‚РѕСЂС‹!
+
+РџСЂРµРїСЂРёРЅС‚ СЂР°Р·РјРµС‰РµРЅ РІ eLibrary.
+
+РџСЂРµРїСЂРёРЅС‚С‹ РРџРњ</Body>
+  <From>shirokiy@keldysh.ru</From>
+  <To>toAllAuthors</To>
+  <Attachments />
+  <HourInterval>0</HourInterval>
+  <IsClosed>false</IsClosed>
+  <PaperId>-1</PaperId>
+  <StateId>15</StateId>
+  <CreationDate>2015-04-17T12:21:00.714+04:00</CreationDate>
+  <Id>StatusMailTemplate</Id>
+</MailInfo>

@@ -1,0 +1,96 @@
+2015-02-23 21:10:00.6952|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-23 21:10:09.1274|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 21:10:12.0198|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 21:10:12.0679|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 21:10:12.0679|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 21:10:18.9935|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-23 21:10:20.4306|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 21:10:22.2441|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 21:10:22.2931|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 21:10:22.3291|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 21:27:52.2420|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-23 21:27:57.3430|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 21:27:59.2254|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 21:27:59.2774|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 21:27:59.2854|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 21:49:45.8832|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-23 21:49:50.7570|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 21:49:52.1616|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 21:49:52.2177|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 21:49:52.2567|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 21:59:08.0688|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-23 21:59:12.1013|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 21:59:13.9656|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 21:59:14.1157|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 21:59:14.1457|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 22:05:07.2776|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-23 22:05:11.5237|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 22:05:13.2159|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 22:05:13.2689|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 22:05:13.2909|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 22:14:13.3143|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: admin@localhost.localhost
+2015-02-23 22:14:33.3771|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-02-23 22:14:38.1744|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-02-23 23:43:08.3334|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-23 23:43:09.1655|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 23:43:12.3059|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 23:43:12.3689|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:43:12.3769|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:46:06.5130|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-23 23:46:06.7451|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 23:46:07.7601|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 23:46:07.7796|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:46:07.7796|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:46:45.3020|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-23 23:46:49.0305|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 23:46:50.2495|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 23:46:50.3045|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:46:50.3045|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:48:29.4164|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 23:48:42.3269|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 23:48:42.3870|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:48:42.3960|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:50:00.3431|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-23 23:50:01.5550|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 23:50:04.6591|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 23:50:04.7262|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:50:04.7262|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:50:59.9110|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-23 23:51:03.1256|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 23:51:05.7364|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 23:51:05.8214|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:51:05.9846|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:52:44.6315|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 23:52:47.1557|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 23:52:47.1987|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:52:47.2117|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:55:32.3336|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-23 23:55:35.4810|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 23:55:39.1239|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 23:55:39.2390|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:55:39.2485|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:55:46.8245|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-23 23:55:47.1477|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 23:55:48.1194|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 23:55:48.1734|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:55:48.1734|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:55:49.4815|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 23:55:50.9595|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 23:55:51.0520|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:55:51.1036|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:55:51.2351|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-23 23:55:52.6977|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 23:55:54.3908|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 23:55:54.6690|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:55:54.6710|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:55:57.1263|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-23 23:55:57.8873|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 23:55:59.2542|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 23:55:59.3127|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:55:59.3598|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:56:04.0455|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-23 23:56:07.0751|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-23 23:56:08.4828|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-23 23:56:10.2000|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-02-23 23:56:10.2685|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-23 23:56:10.2980|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5

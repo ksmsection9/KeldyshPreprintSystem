@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Список заявок";
+}
+
+<h2>Список заявок</h2>
+@if (Model != null)
+{
+    if (Model.Count > 0)
+    {
+    <table style="font-size: large">
+        @foreach (var paper in Model)
+        {
+            <tr>
+                <td colspan="4">
+                    <a href="~/Editor/Edit/Submission?id=@paper.Id">№@paper.Id Редактировать заявку на публикацию препринта "@paper.TitleRussian"</a>
+                </td>
+            </tr>
+            <tr class="spaceUnder" style="font-size: small">
+                <td>
+                    <a href="~/PaperSubmission/Download?id=@paper.Id&type=docx" class="link-dot">Скачать заявку (.docx)</a>
+                </td>
+                <td>
+                    <a href="~/PaperSubmission/Download?id=@paper.Id&type=pdf" class="link-dot">Скачать заявку (.pdf)</a>
+                </td>
+                <td>
+                    <a href="~/PaperSubmission/Download?id=@paper.Id&forcorrector=true" class="link-dot">Скачать заявку (версия для корректора)</a>
+                </td>
+                <td>
+                    <a href="~/Editor/Edit/Delete?paperId=@paper.Id"  onclick="return confirm('Действительно хотите удалить заявку?');" class="link-dot">Удалить заявку</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <hr style="display: block" />
+                </td>
+            </tr>
+        }
+    </table>
+    }
+    else
+    {
+    <p>Не подано ни одной заявки.</p> 
+    }
+}

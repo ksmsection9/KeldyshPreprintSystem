@@ -1,0 +1,66 @@
+﻿@{
+    var controller = ViewContext.RouteData.GetRequiredString("controller");
+    var action = ViewContext.RouteData.GetRequiredString("action");
+    var area = ViewContext.RouteData.DataTokens["area"];
+    string currentRole = KeldyshPreprintSystem.Tools.AccountHelper.GetUserRole(WebSecurity.CurrentUserId);
+}
+@if (area != "Editor" && (controller != "Account" || action != "Login"))
+{
+    <div id="navigationMenu">
+        <ul>
+        @*    @if (controller == "Home")
+            {
+                <li class='active'>@Html.ActionLink("Главная", "Index", new { area = "", controller = "Home" })</li>
+            }
+            else
+            {
+                <li>@Html.ActionLink("Главная", "Index", new { area = "", controller = "Home" })</li>
+            }*@
+
+
+            @if (currentRole == "user")
+            {
+                if (controller == "PaperSubmission" && action == "Create")
+                {
+                <li class='active'>@Html.ActionLink("Подать заявку", "Create", new { area = "", controller = "PaperSubmission" })</li>
+                }
+                else
+                    if (controller == "PaperSubmission" && action == "Success")
+                    {
+                <li class='active'><a href="#">Заявка отправлена!</a></li>
+                    }
+                    else
+                    {
+                <li>@Html.ActionLink("Подать заявку", "Create", new { area = "", controller = "PaperSubmission" })</li>
+                    }
+            }
+
+            @if (controller == "Panel")
+            {
+                <li class='active'>@Html.ActionLink("Управление заявками", "Index", new { area = "", controller = "Panel" })</li>
+            }
+            else
+            {
+                <li>@Html.ActionLink("Управление заявками", "Index", new { area = "", controller = "Panel" })</li>
+            }
+
+            @if (currentRole == "admin")
+            {
+                if (area == "Admin" && controller == "Settings")
+                {
+                <li class='active'>@Html.ActionLink("Настройки", "Index", new { area = "Admin", controller = "Settings" })</li>
+                }
+                else
+                {
+                <li>@Html.ActionLink("Настройки", "Index", new { area = "Admin", controller = "Settings" })</li>
+                }
+            }
+
+            @if (controller != "Account")
+            {
+                <li>@Html.ActionLink("Выйти", "Login", new { area = "", controller = "Account" })</li>
+            }
+        </ul>
+    </div>
+    <div id="placeHolder" style="width: 100%; height: 40px;"></div>
+}

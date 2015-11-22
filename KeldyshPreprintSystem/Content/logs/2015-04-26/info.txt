@@ -1,0 +1,385 @@
+2015-04-26 01:39:23.1514|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 01:39:30.6216|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 01:39:32.6691|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 15:33:41.9727|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 15:33:46.7835|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 15:33:47.4090|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 15:34:01.3488|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 15:34:03.5539|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 15:34:33.6696|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: admin@localhost.localhost
+2015-04-26 15:35:07.3991|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 15:35:07.6031|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 15:35:13.4607|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 15:37:02.6309|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 15:37:08.1068|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 15:37:10.6184|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 15:37:45.2100|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 15:37:45.5821|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 15:37:49.9597|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 16:05:31.0926|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 16:05:36.8226|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 16:05:38.2006|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 16:43:37.7201|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 16:43:50.0227|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 16:43:53.9260|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 16:43:54.7727|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 16:44:00.2374|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 16:44:03.5905|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 16:47:15.8650|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 16:50:17.9543|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 16:50:27.1793|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 16:50:30.5679|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 16:50:31.1582|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 16:51:06.4546|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 16:51:09.3031|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 16:52:39.9895|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 17:28:53.4651|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:29:07.7212|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:29:11.7017|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:29:12.3488|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:29:19.7070|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:29:21.7143|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:30:14.2186|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 17:31:51.4911|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:32:02.7686|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:32:06.7500|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:32:07.3955|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:32:15.6944|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:32:18.5732|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:33:12.1613|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 17:33:43.3516|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:33:54.2437|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:33:57.8355|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:33:58.4007|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:34:04.1186|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:34:07.1491|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:35:14.5735|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 17:36:39.2375|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:36:42.4927|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:36:43.3312|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:36:43.6377|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:36:53.5202|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:36:54.0299|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:37:14.5609|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 17:37:30.5677|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:37:33.1912|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:37:34.1515|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:37:34.3526|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:37:41.2102|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:37:41.7617|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:38:06.4990|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 17:41:09.4233|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:41:12.0350|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:41:12.8259|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:41:12.9356|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:41:33.5536|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:41:34.0816|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:42:09.5629|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 17:43:34.3299|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:43:36.9666|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:43:37.7769|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:43:38.1052|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:43:48.0640|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:43:48.6064|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:43:59.9247|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:44:00.9209|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:44:01.3667|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:44:12.0145|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:44:12.6211|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:45:34.1176|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 17:46:11.3909|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:46:14.5937|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:46:16.1227|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:46:16.4851|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:46:24.9331|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:46:25.4620|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:46:54.3643|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 17:47:16.3594|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:47:19.6288|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:47:20.6922|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:47:21.0436|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:47:25.5717|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:47:26.0749|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:47:37.7179|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 17:52:36.4039|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:52:39.1201|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:52:39.9599|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:52:40.2653|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:52:58.0723|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:52:58.6332|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:53:11.9491|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:53:12.7867|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:53:13.2387|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:53:21.6832|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:53:22.2839|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:53:38.4807|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 17:53:51.8758|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:53:54.8246|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:53:56.0263|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:53:56.2533|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:54:05.1555|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:54:05.6720|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:54:21.7670|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 17:55:39.2733|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:55:42.0142|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:55:42.8294|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:55:43.1452|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:55:51.5189|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:55:52.0360|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:56:19.9387|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 17:56:39.3784|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:56:42.0925|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:56:43.0309|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:56:43.2370|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:56:51.0880|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:56:51.6189|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:57:08.3511|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 17:58:22.8657|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:58:26.1125|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:58:26.9717|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:58:27.2718|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 17:58:34.9395|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 17:58:35.4461|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 17:58:47.2181|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:00:35.3677|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:00:38.9131|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:00:39.8264|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:00:40.0594|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:00:45.8779|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:00:46.4523|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:01:44.2612|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:01:55.6142|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:01:58.3485|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:01:59.1714|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:01:59.5043|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:02:11.1789|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:02:11.7300|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:02:35.1744|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:03:42.2786|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:03:45.0123|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:03:45.9184|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:03:46.1560|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:03:53.7512|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:03:54.3054|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:04:15.1705|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:04:29.3897|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:04:32.9499|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:04:33.9767|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:04:34.3298|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:04:43.7554|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:04:44.3296|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:05:03.8262|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:05:25.7117|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:05:28.2674|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:05:29.1143|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:05:29.4337|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:05:37.8302|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:05:38.3385|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:05:56.0013|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:06:02.3208|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:06:05.5307|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:06:06.4187|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:06:06.6968|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:06:25.5355|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:06:26.0206|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:07:28.2057|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:09:03.7743|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:09:06.6745|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:09:07.4918|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:09:07.8250|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:09:27.4466|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:09:27.8867|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:09:38.0122|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:09:38.8727|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:09:39.4408|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:09:45.7791|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:09:46.4033|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:10:04.9547|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:10:28.0513|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:10:30.9241|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:10:32.3080|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:10:32.5801|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:10:36.7975|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:10:37.3039|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:10:48.6859|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:11:44.3044|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:11:47.4654|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:11:48.3594|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:11:48.6164|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:11:55.1747|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:11:55.6889|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:12:39.6993|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:13:10.2617|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:13:13.0070|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:13:13.8716|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:13:14.1450|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:13:20.2468|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:13:20.7701|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:13:42.3089|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:13:48.8058|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:13:52.4401|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:13:53.4164|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:13:53.7804|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:13:59.6747|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:14:00.2347|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:14:13.7072|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:19:30.3987|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:19:34.2603|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:20:26.5849|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:20:26.8410|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:20:48.0108|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:21:36.0783|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:21:36.3364|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:24:24.5060|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:24:26.1154|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:24:28.4910|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:24:38.2482|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:24:38.9357|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:24:59.8786|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:24:59.8786|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:31:03.4863|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:31:06.7677|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:31:07.6428|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:31:07.9865|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:31:12.3461|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:31:12.8461|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:31:59.2246|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:33:05.4572|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:33:09.0511|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:33:09.9730|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:33:10.2855|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:33:14.8794|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:33:15.4107|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:33:59.7315|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:34:34.6608|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:34:37.8016|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:34:38.6766|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:34:39.0360|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:34:48.9114|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:34:49.4427|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:35:04.4048|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:35:18.0882|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:35:20.8539|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:35:21.7602|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:35:22.0727|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:35:27.7136|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:35:28.2448|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:35:41.7141|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:35:42.5423|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:35:43.0111|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:35:48.6519|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:35:49.2613|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:36:01.1002|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:36:02.0415|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:36:03.4166|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:36:04.0572|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:36:04.7418|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:36:34.0479|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:36:35.2510|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:36:35.5323|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:36:39.3450|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:36:39.8606|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:37:00.4633|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:37:38.2773|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:37:41.3399|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:37:42.1524|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:37:42.3087|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:37:47.1995|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:37:47.6995|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:37:55.9358|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:38:39.2005|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:38:40.8568|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:38:41.5756|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:38:41.9037|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:38:47.1695|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:38:47.9039|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:39:09.1665|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:40:15.9652|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:40:18.6528|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:40:19.6685|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:40:19.8716|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:40:25.0749|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:40:25.6531|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:40:34.5072|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:41:15.7432|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:41:17.8682|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:41:18.6651|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:41:18.7120|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:41:25.2279|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:41:26.2123|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:42:14.1449|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 18:43:09.8125|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:43:13.9745|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:43:14.6152|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:43:14.9590|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:43:25.6625|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:43:26.1781|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 18:43:26.2250|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 18:43:33.5378|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 18:43:34.2253|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 20:51:01.2190|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 20:52:55.1460|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 20:52:56.9742|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 20:52:57.6461|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 20:52:57.8493|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 20:53:09.7403|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 20:53:10.3810|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 20:53:15.0061|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 20:53:26.8690|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 20:53:27.4784|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 20:53:45.5389|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 20:53:46.4215|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 20:53:46.7899|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 20:54:19.8808|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 20:54:20.5369|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 20:54:23.3937|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 21:00:23.5126|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: admin@localhost.localhost
+2015-04-26 22:27:20.5164|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 22:28:44.3554|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 22:28:48.1368|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 22:31:15.0880|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 22:31:25.6869|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 22:31:29.9058|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 22:31:30.5621|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 22:31:34.5779|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 22:31:37.4218|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 22:31:40.6719|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 22:31:47.6736|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 22:31:51.9999|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 22:31:53.5312|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 22:31:54.7969|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 22:32:28.6301|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-26 22:32:57.4900|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: corrector@localhost.localhost
+2015-04-26 22:33:50.7740|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 22:33:52.6151|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 22:33:55.7177|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 22:34:02.7961|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 22:34:04.4338|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 22:34:06.2582|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 22:37:13.5643|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-04-26 22:37:13.5799|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 
+2015-04-26 22:37:13.5799|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid is null. new guid: b54c8e94-c5cd-4adf-8a45-de8b12d171ce
+2015-04-26 22:37:13.6112|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: b54c8e94-c5cd-4adf-8a45-de8b12d171ce response: True
+2015-04-26 22:38:00.3606|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Removing upload...
+2015-04-26 22:38:00.3606|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: b54c8e94-c5cd-4adf-8a45-de8b12d171ce
+2015-04-26 22:38:00.3606|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Upload removed: False for guid b54c8e94-c5cd-4adf-8a45-de8b12d171ce
+2015-04-26 22:38:14.9271|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-04-26 22:38:14.9271|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: b54c8e94-c5cd-4adf-8a45-de8b12d171ce
+2015-04-26 22:38:14.9583|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: b54c8e94-c5cd-4adf-8a45-de8b12d171ce response: True
+2015-04-26 23:24:11.9811|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 23:24:15.2000|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 23:24:16.0438|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 23:24:16.4188|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 23:24:18.2939|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 23:24:18.7783|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 23:29:18.8115|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: corrector@localhost.localhost
+2015-04-26 23:34:43.1528|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 23:34:46.7382|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 23:34:49.1914|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 23:34:49.8320|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-26 23:34:53.7816|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-26 23:34:56.2080|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-26 23:36:24.0302|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-04-26 23:36:24.0458|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 
+2015-04-26 23:36:24.0458|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid is null. new guid: 335cac6d-7f84-4220-a091-db79df734323
+2015-04-26 23:36:24.0927|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 335cac6d-7f84-4220-a091-db79df734323 response: True

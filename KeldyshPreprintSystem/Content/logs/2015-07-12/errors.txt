@@ -1,0 +1,2 @@
+2015-07-12 14:57:06.9271|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Syntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-12 15:00:07.3082|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Syntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""

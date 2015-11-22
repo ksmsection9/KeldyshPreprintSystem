@@ -1,0 +1,6 @@
+2015-05-13 00:22:31.0225|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-05-13 00:22:32.8001|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-05-13 00:22:33.5994|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job -1:4
+2015-05-13 00:22:33.6004|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-05-13 00:22:33.6224|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:6
+2015-05-13 00:22:33.6504|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5

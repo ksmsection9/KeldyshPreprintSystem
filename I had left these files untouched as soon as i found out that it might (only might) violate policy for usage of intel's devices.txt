@@ -1,0 +1,27 @@
+Investigation will be able to analyze these files and get the idea that it is non-commercial, non-transmitting (as far as i know, now i suppose there might be some metadata in VS studio project files which might (only might) be sensitive in some way) any confidential information academic software research, which were done in spare time. 
+I have honestly considered that it is a fair personal use of intel device without any violation of intel's commercial or other interests, unless, ofcourse, it is violates usage policy. 
+If it was violated then it was violated by me without knowing that i actually violate it. I have found out that it might (only might) violate usage policy, 
+i have stopped such suspicious usage because i have no evil or malicious intensions, and really want to obey the rules (which are kind of confusing btw) and i just don't want to be fired.
+I have used those files only when i was in intern position (i've started working at intel in March 03, 2015)
+Note the datestamps of file change:
+1)Daytime changes are done in my offwork days (i've worked 3 days a week: monday, wendnesday, thursday) 
+2)Evening hours are obviously my spare time.
+
+It worth to note again that it only *might* violate usage policy, but most certainly does not interfere with intel's interests, does not lead to intel loss of money and does not give any advantage for intel's business opponents.
+No damage for intel's interests and no consious violations were intended.
+
+I've discussed with my manager aspects of Intel's devices usage, but i did not directly reported about this particular possible violation, so my manager does not know. 
+I guess i'm bit too scared of firing that's why i'm not reporting such possible violation and hope that if it is not violation (or maybe not severe violation, just a very little one) then it will be never found out.
+
+*UPDATE*
+My concerns of violations for usage policy are related to the fact that i did receive money reward (approximately 400$ a month) from academia (keldysh institute of applied mathematics) for which i have done this research.
+But it really hard to distinguish my personal interest of pursuing my master's degree at MSU, where these actual work was stated as my coursework, and my commercial interest for 400$ a month, which were payed by the strictly non-commercial academia scientific organization.
+2 interesting facts:
+1) there is no public evidence that institute of applied mathematics does any commercial projects (only non-commercial, scientific ones). I have to state that i am not aware of any commercial projects where institute of applied mathematics participates, and of course i am not participating in such projects. My 400$, which i had received couple of months, is the Russian Federation state budget money on which keldysh institute is relying to as non-commercial state organization.
+2) all of my research is obviously a public domain research without direct commercial interest of selling it as a product or something like that. It is not related to commercial buissiness in any way (although there are some commercial analogues for my system, as well as open-source non-commercial ones, like Open Journal System).
+
+Obviously, the severity of this possible violation if it is really a violation, must be considered by the intel authorities, 
+but really i tend to think that is a fair personal use of intel device and this text i've written is just to be safe. Maybe it will help me to not become a victim of possibly unfair investigation, or bureacratic madness, because when it comes to security then authorities tend to think that it is better to be oversafe than undersafe.
+
+**UPDATE**
+much lesser than 400$, it was actually 20000 roubles which is for current conversion course is 325$

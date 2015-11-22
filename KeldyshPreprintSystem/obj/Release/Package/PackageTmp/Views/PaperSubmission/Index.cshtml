@@ -1,0 +1,103 @@
+﻿@{
+    ViewBag.Title = "Сырые данные";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Index</h2>
+
+
+
+@if (Model != null)
+{
+    foreach (var paper in Model)
+    {
+    <table cellspacing="2" border="1" cellpadding="5" width="600">
+        <tr>
+            <th>Авторы</th>
+            <th>Название(рус.)
+            </th>
+            <th>
+            Название(англ.)
+        </tr>
+        <tr>
+            <td>
+                @if (paper.Authors != null)
+                {
+                    foreach (var author in paper.Authors)
+                    {
+                    @Html.Encode(author.FirstnameRussian+" "+author.LastnameRussian + "\r\n" + author.FirstnameEnglish + "\r\n" + author.Email);
+                    }
+                }
+                else
+                {
+                     @Html.Encode("Authors is NULL");
+                }
+            </td>
+            <td>
+                @Html.Encode(paper.TitleRussian)
+            </td>
+            <td>
+                @Html.Encode(paper.TitleEnglish)
+            </td>
+        </tr>
+        <tr>
+            <th>Аннотация(рус.)</th>
+            <th>Аннотация(англ.)
+            </th>
+            <th>Ключевые слова(рус., англ.).
+            </th>
+        </tr>
+        <tr>
+            <td>
+                @Html.Encode(paper.AbstractRussian)
+            </td>
+            <td>
+                @Html.Encode(paper.AbstractEnglish)
+            </td>
+            <td>
+                @Html.Encode(paper.KeywordsRussian + " " + paper.KeywordsEnglish)
+            </td>
+        </tr>
+        <tr>
+            <th>Языки, Кол-во страниц, Кол-во авторских экземпляров</th>
+            <th>Рубрика, УДК
+            </th>
+            <th>Библиография
+            </th>
+        </tr>
+        <tr>
+            <td>
+                @Html.Encode(paper.Languages + " " + paper.NumberOfPages + " " + paper.NumberOfAuthorsCopies)
+            </td>
+            <td>
+                @Html.Encode(paper.FieldOfResearch + " " + paper.UDK)
+            </td>
+            <td>
+                @Html.Encode(paper.Bibliography)
+            </td>
+        </tr>
+        <tr>
+            <th>Финансовая поддержка</th>
+            <th>Уполномоченный автор
+            </th>
+            <th>Рецензия(первые 50 символов)
+            </th>
+        </tr>
+        <tr>
+
+            <td>
+                @Html.Encode(paper.FinancialSupport)
+            </td>
+            <td>
+                @Html.Encode(paper.ContactPhone+" "+paper.ContactName)
+            </td>
+            <td>
+                @Html.Encode(paper.Review)
+            </td>
+        </tr>
+    </table>
+    }
+}
+
+<p>
+    @Html.ActionLink("Подать заявку", "Create")
+</p>

@@ -1,0 +1,250 @@
+﻿@{
+    ViewBag.Title = "Настройки";
+}
+
+@*Messages*@
+<h3>Тексты сообщений</h3>
+
+@Html.Hidden("stateCount", KeldyshPreprintSystem.Tools.EditorHelper.StatusActionDictionary.Keys.Max())
+<a style="position: fixed; bottom: 1em; right: 0em; background-color: rgba(6, 92, 140, 0.8); color: rgba(223, 240, 251, 1); text-decoration: none; font-size: large; padding: 2em;" href="#" id="saveAllBtn" onclick="SaveAllMessages();">Сохранить все</a>
+
+@foreach (var pair in KeldyshPreprintSystem.Tools.EditorHelper.StatusActionDictionary)
+{
+    var mail = KeldyshPreprintSystem.Tools.PanelHelper.GetMailTemplateForCurrentState(pair.Key);
+    string subject = "";
+    string body = "";
+    string interval = "";
+    string to = "";
+    var smsInfo = KeldyshPreprintSystem.Tools.PanelHelper.GetSmsTemplateForCurrentState(pair.Key);
+    string sms = "";
+    if (smsInfo != null)
+    {
+        sms = smsInfo.Body;
+    }
+    bool attachPaper = false;
+    bool attachSubmission = false;
+    if (mail != null)
+    {
+        subject = mail.Subject;
+        body = mail.Body;
+        interval = mail.HourInterval.ToString();
+        to = mail.To;
+        if (mail.IsAnyAttachments)
+        {
+            foreach (string attachment in mail.Attachments)
+            {
+                if (attachment == "ReplaceForPathToPaper")
+                {
+                    attachPaper = true;
+                }
+                if (attachment == "ReplaceForPathToSubmission")
+                {
+                    attachSubmission = true;
+                }
+            }
+        }
+    }
+    
+    <h4>Статус: @pair.Key. @KeldyshPreprintSystem.Tools.EditorHelper.GetStatusDescription(pair.Key)</h4>
+    <label>CМС (60 символов)</label><br />
+    <textarea rows="1" cols="50" id="sms_@pair.Key">@sms</textarea><br />
+    <label>Заголовок</label><br />
+    <textarea rows="1" cols="50" id="subject_@pair.Key">@subject</textarea><br />
+    <label>Сообщение</label><br />
+    <textarea rows="10" cols="50" id="body_@pair.Key">@body</textarea><br />
+    if (to == "toEditor")
+    {
+    @Html.RadioButton("to_" + pair.Key, "toEditor", true)<p style="display: inline">Редактору</p>
+    }
+    else
+    {
+    @Html.RadioButton("to_" + pair.Key, "toEditor", false)<p style="display: inline">Редактору</p>
+    }
+    if (to == "toCorrector")
+    {
+    @Html.RadioButton("to_" + pair.Key, "toCorrector", true)<p style="display: inline">Корректору</p>
+    }
+    else
+    {
+    @Html.RadioButton("to_" + pair.Key, "toCorrector", false)<p style="display: inline">Корректору</p>
+    }
+    if (to == "toAuthor")
+    {
+    @Html.RadioButton("to_" + pair.Key, "toAuthor", true)<p style="display: inline">Автору</p>
+    }
+    else
+    {
+    @Html.RadioButton("to_" + pair.Key, "toAuthor", false)<p style="display: inline">Автору</p>
+    }
+    if (to == "toTypographer")
+    {
+    @Html.RadioButton("to_" + pair.Key, "toTypographer", true)<p style="display: inline">Полиграфисту</p>
+    }
+    else
+    {
+    @Html.RadioButton("to_" + pair.Key, "toTypographer", false)<p style="display: inline">Полиграфисту</p>
+    }
+    if (to == "toInternetGuy")
+    {
+    @Html.RadioButton("to_" + pair.Key, "toInternetGuy", true)<p style="display: inline">Интернетчику</p>
+    }
+    else
+    {
+    @Html.RadioButton("to_" + pair.Key, "toInternetGuy", false)<p style="display: inline">Интернетчику</p>    }
+
+    if (to == "toAllAuthors")
+    {
+    @Html.RadioButton("to_" + pair.Key, "toAllAuthors", true)<p style="display: inline">Всем авторам</p>
+    }
+    else
+    {
+    @Html.RadioButton("to_" + pair.Key, "toAllAuthors", false)<p style="display: inline">Всем авторам</p>
+    }
+    if (to == "toEditorialBoard")
+    {
+    @Html.RadioButton("to_" + pair.Key, "toEditorialBoard", true)<p style="display: inline">Редколлегии</p>
+    }
+    else
+    {
+    @Html.RadioButton("to_" + pair.Key, "toEditorialBoard", false)<p style="display: inline">Редколлегии</p>
+    }
+    <br />  
+    <label>Интервал (в часах):</label>
+    <input style="display:inline;" id="interval_@pair.Key" value="@interval"/><br />
+    @Html.CheckBox("attachPreprint_" + pair.Key, attachPaper, new { Value = "Приложить препринт" }) <p style="display: inline">Препринт</p>
+    @Html.CheckBox("attachSubmission_" + pair.Key, attachSubmission, new { Value = "Приложить заявку" }) <p style="display: inline">Заявка</p>
+    <a class="link-dot" href="#" id="saveMessageForState_@pair.Key" onclick="SaveMessage(@pair.Key); return false;">Сохранить</a>
+    
+  
+    //checkboxes
+    //roles to send whom
+    //+
+    //attachments
+}
+
+<h2>Настройки</h2>
+
+@foreach (KeyValuePair<string, Dictionary<string, string>> dictPair in Model)
+{
+    <h4>@KeldyshPreprintSystem.Tools.ConfigurationResourcesHelper.GetResourceKeyTranslation(dictPair.Key)</h4>
+    <table style="width: 100%">
+        @foreach (KeyValuePair<string, string> pair in dictPair.Value)
+        {  
+            <tr>
+                <td style="width: 20%">
+                    <label>@KeldyshPreprintSystem.Tools.ConfigurationResourcesHelper.GetResourceKeyTranslation(pair.Key)</label>
+                </td>
+                <td>
+                    <input type="text" class="configInput" name="@dictPair.Key" id="@pair.Key" value="@pair.Value.Trim()" style="width:80%"/>
+                </td>
+            </tr>
+        }
+    </table>
+}
+
+@*Login settings*@
+<h3>Аккаунты</h3>
+<table style="text-align: center;">
+    <tr>
+        <th>Логин
+        </th>
+        <th>Роль
+        </th>
+        <th>Новый пароль
+        </th>
+    </tr>
+    @foreach (string account in KeldyshPreprintSystem.Tools.AccountHelper.GetAccounts())
+    {
+        <tr>
+            <td>@account</td>
+            <td>@KeldyshPreprintSystem.Tools.AccountHelper.GetRoleTranslation(KeldyshPreprintSystem.Tools.AccountHelper.GetUserRole(WebSecurity.GetUserId(account)))</td>
+            <td>
+                <input type="text" name="@account" size="30" placeholder = "Введите новый пароль" class="passInput" />
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+@section scripts
+{
+    <script src="@Url.Content("~/Scripts/notify.min.js")"></script>
+    <script>
+        $(document).ready(function () {
+            $(".configInput").on('focusout keydown', function (event) {
+                if (event.keyCode == 13 || event.keyCode == undefined) {
+                    var area = $(this).attr("name");
+                    var key = $(this).attr("id");
+                    var value = $(this).val();
+                    $(this).notify("Сохраняется...", { position: "bottom", className: "info", autoHideDelay: 1500 });
+                    var result = $.get("/Admin/Settings/SetOption?area=" + area + "&key=" + key + "&value=" + value);
+                    $(this).notify("Сохранено", { position: "bottom", className: "info", autoHideDelay: 1500 });
+                    //    $(this).notify("Ошибка сохранения", { position: "bottom", className: "info", autoHideDelay: 1500 });
+
+                }
+            });
+
+            $(".passInput").on('focusout keydown', function (event) {
+                if (event.keyCode == 13 || event.keyCode == undefined) {
+                    var username = $(this).attr("name");
+                    var password = $(this).val();
+                    if (password != '' && password != null) {
+                        $(this).notify("Пароль обновляется...", { position: "bottom", className: "info", autoHideDelay: 1500 });
+                        var result = $.get("/Admin/Settings/ChangeLoginPassword?username=" + username + "&password=" + password);
+                        $(this).notify("Пароль обновлен ", { position: "bottom", className: "info", autoHideDelay: 1500 });
+                        $(this).val('');
+                    }
+                }
+            });
+        });
+
+
+        function SaveAllMessages() {
+            var maxState = $("input[name='stateCount']").val();
+            for (var i = 1; i <= maxState; i++) {
+                window.setTimeout(SaveMessage(i), 50);
+            }
+        }
+
+        //int stateId, string subject, string body, string roleMail, int interval, bool attachPaper, bool attachSubmission
+        function SaveMessage(stateId) {
+            //event.preventDefault();
+            var subject = $("#subject_" + stateId).val().trim();
+            if (subject == "")
+                subject = "(Не указано)";
+            var body = $("#body_" + stateId).val().trim();
+            if (body == "")
+                body = "(Не указано)";
+
+            var checked = $("#to_" + stateId + ":checked").val();
+            if (checked == null || typeof checked == 'undefined') {
+                $.notify("Ошибка сохранения для статуса " + stateId + ". Укажите получателей рассылки.", { position: "bottom right", className: "error", autoHideDelay: 15000 });
+                return;
+            }
+            var to = checked.trim();
+
+            var interval = $("#interval_" + stateId).val().trim();
+            if (interval == "" || isNaN(parseInt(interval))) {
+                $.notify("Ошибка сохранения для статуса " + stateId + ". Укажите интервал рассылки. Укажите 0 для разовой рассылки.", { position: "bottom right", className: "error", autoHideDelay: 15000 });
+                return;
+            }
+
+            var sms = $("#sms_" + stateId).val();
+
+            var attachPreprint = "false";
+            if ($('#attachPreprint_' + stateId).is(':checked')) {
+                attachPreprint = "true";
+            }
+
+            var attachSubmission = "false";
+            if ($('#attachSubmission_' + stateId).is(':checked')) {
+                attachSubmission = "true";
+            }
+            $.get("@Url.Action("SaveStatusMailTemplate", "Settings", new { area = "Admin", controller = "Settings" }, "https")" + "?stateId=" + stateId + "&subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body) + "&roleMail=" + to + "&interval=" + interval + "&attachPaper=" + attachPreprint + "&attachSubmission=" + attachSubmission + "&sms=" + encodeURIComponent(sms) + "&anticache=@Guid.NewGuid().ToString()", function (data) { $.notify("Рассылка сохранена для статуса " + stateId + ".", { position: "bottom right", className: "info", autoHideDelay: 1500 }); })
+                .fail(function () {
+                    alert("Ошибка при сохранении данных для статуса " + stateId + "!");
+                });
+        }
+    </script>
+}

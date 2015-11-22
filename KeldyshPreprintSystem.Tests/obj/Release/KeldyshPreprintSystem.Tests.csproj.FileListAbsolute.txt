@@ -1,0 +1,67 @@
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\NLog.config
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\KeldyshPreprintSystem.Tests.dll.config
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\KeldyshPreprintSystem.Tests.dll
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\KeldyshPreprintSystem.Tests.pdb
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\KeldyshPreprintSystem.dll
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\Newtonsoft.Json.dll
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.Helpers.dll
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.Mvc.dll
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.Razor.dll
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.WebPages.dll
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.Optimization.dll
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\NLog.dll
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\Spire.Doc.dll
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\Spire.Pdf.dll
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\Spire.License.dll
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\KeldyshPreprintSystem.pdb
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\Newtonsoft.Json.xml
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.Helpers.xml
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.Mvc.xml
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.Razor.xml
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.WebPages.xml
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.WebPages.Deployment.xml
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.WebPages.Razor.xml
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\NLog.xml
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\Spire.Doc.xml
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\Spire.License.xml
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\obj\Release\KeldyshPreprintSystem.Tests.csprojResolveAssemblyReference.cache
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\obj\Release\KeldyshPreprintSystem.Tests.dll
+C:\Users\adm\documents\visual studio 2012\Projects\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\obj\Release\KeldyshPreprintSystem.Tests.pdb
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\NLog.config
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\KeldyshPreprintSystem.Tests.dll.config
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\KeldyshPreprintSystem.Tests.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\KeldyshPreprintSystem.Tests.pdb
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\KeldyshPreprintSystem.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\Newtonsoft.Json.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.Helpers.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.Mvc.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.Razor.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.WebPages.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\EntityFramework.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.Optimization.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\NLog.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\CloudConvert.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\DocX.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\DataAnnotationsExtensions.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\KeldyshPreprintSystem.pdb
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\Newtonsoft.Json.xml
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.Helpers.xml
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.Mvc.xml
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.Razor.xml
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.WebPages.xml
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.WebPages.Deployment.xml
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\System.Web.WebPages.Razor.xml
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\EntityFramework.xml
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\NLog.xml
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\bin\Release\CloudConvert.xml
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\obj\Release\KeldyshPreprintSystem.Tests.csprojResolveAssemblyReference.cache
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\obj\Release\KeldyshPreprintSystem.Tests.dll
+C:\Users\dvg\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem.Tests\obj\Release\KeldyshPreprintSystem.Tests.pdb

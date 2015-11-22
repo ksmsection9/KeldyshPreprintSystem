@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Главная страница";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Главная страница</h2>
+@if (KeldyshPreprintSystem.Tools.AccountHelper.GetUserRole(WebSecurity.CurrentUserId) == "user")
+{
+    <a href="~/PaperSubmission/Create">Подать заявку на издание препринта ИПМ им. М.В. Келдыша</a>
+    <br />
+}
+@*<br />
+<a href="~/PaperSubmission/Index">Посмотреть сырые данные</a>*@
+<a href="~/Editor/Edit">Редактировать заявки</a>
+<br />
+<a href="~/Account/Login">Выйти из системы</a>

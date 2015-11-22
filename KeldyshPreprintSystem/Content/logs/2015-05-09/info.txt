@@ -1,0 +1,1 @@
+2015-05-09 00:30:06.7656|INFO|KeldyshPreprintSystem.MvcApplication|Application End

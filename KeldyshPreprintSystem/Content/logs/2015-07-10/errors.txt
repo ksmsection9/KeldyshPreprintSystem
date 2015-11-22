@@ -1,0 +1,30 @@
+2015-07-10 15:37:12.2270|ERROR|KeldyshPreprintSystem.Areas.Admin.Controllers.PanelController|Error getting value from 'ReadTimeout' on 'System.IO.FileStream'.
+2015-07-10 15:42:12.7779|ERROR|KeldyshPreprintSystem.Areas.Admin.Controllers.PanelController|Error getting value from 'ReadTimeout' on 'System.IO.FileStream'.
+2015-07-10 16:33:03.3139|ERROR|KeldyshPreprintSystem.Areas.Admin.Controllers.PanelController|Error getting value from 'ReadTimeout' on 'System.IO.FileStream'.
+2015-07-10 16:36:25.5211|ERROR|KeldyshPreprintSystem.Areas.Admin.Controllers.PanelController|Error getting value from 'ReadTimeout' on 'System.IO.FileStream'.
+2015-07-10 16:42:49.1962|ERROR|KeldyshPreprintSystem.Areas.Admin.Controllers.PanelController|Error getting value from 'ReadTimeout' on 'System.IO.FileStream'.
+2015-07-10 16:49:54.0834|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionSyntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 16:50:08.5505|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionSyntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 16:51:08.3768|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionSyntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 16:52:08.4524|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionSyntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 16:53:28.9019|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionSyntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 16:53:58.5243|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionSyntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 16:54:13.5326|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionSyntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 16:55:13.5981|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionSyntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 16:56:13.0814|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Syntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 17:00:01.9451|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Syntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 17:00:16.6462|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Syntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 17:01:01.8225|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Syntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 17:01:16.8246|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Syntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 17:02:01.8575|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Syntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 17:03:59.7278|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Syntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 17:04:14.8342|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Syntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 17:05:14.8627|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Syntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 17:06:14.8901|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Syntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 17:07:14.9681|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Syntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 17:08:14.9612|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Syntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 17:09:14.9848|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Syntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 17:10:15.0084|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Syntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""
+2015-07-10 17:11:56.9642|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Failure sending mail.
+2015-07-10 17:12:11.9763|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Failure sending mail.
+2015-07-10 17:53:12.7720|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exception Syntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""

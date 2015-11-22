@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "ChangeUserRole";
+}
+
+<h2>Сменить роль</h2>
+Текущая роль: @KeldyshPreprintSystem.Tools.AccountHelper.GetUserRole(WebSecurity.CurrentUserId)<br/>
+@foreach (var role in KeldyshPreprintSystem.Tools.AccountHelper.GetAllRoles())
+{
+    @Html.RadioButton("roleChooser", role) @role<br />
+}
+<a href="#" onclick="ChangeRole(); return true;">Поменять роль!</a>
+<script>
+    function ChangeRole() {
+        var targetRole = $("input[id=roleChooser]:checked").val();
+        $.get("@Url.Action("SetUserRole", "Settings", new { area = "Admin", controller = "Settings" }, "https")" + "?username=@WebSecurity.CurrentUserName&role=" + targetRole + "&anticache=@Guid.NewGuid().ToString()", function (data) { location.reload(); });
+    }
+</script>

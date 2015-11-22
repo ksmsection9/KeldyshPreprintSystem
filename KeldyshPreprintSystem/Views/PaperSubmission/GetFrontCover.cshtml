@@ -1,0 +1,177 @@
+@{
+    Layout = null;
+    int[] args = Model as int[];
+    KeldyshPreprintSystem.Models.PaperSubmissionModel paper = KeldyshPreprintSystem.Tools.PaperSubmissionControllerHelper.GetModel(args[0]);
+    int libraryId = args[1];
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <title>Препринты ИПМ им.М.В.Келдыша</title>
+    <style type="text/css">
+        a.a-white:visited {
+            color: white;
+            text-decoration: underline;
+        }
+
+        a.a-white:link {
+            color: white;
+            text-decoration: underline;
+        }
+
+        a.a-white:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        a.a-blue:visited {
+            color: #005789;
+            text-decoration: underline;
+        }
+
+        a.a-blue:link {
+            color: #005789;
+            text-decoration: underline;
+        }
+
+        a.a-blue:hover {
+            color: #b84499;
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+
+<body bgcolor="#ceeafa" style="font-family: arial,sans-serif; margin-top: 20px; background:none">
+
+    <center>
+
+<div style="width: 680px;">
+<div style=" background-color: #ceeafa; border-left: 7px solid #065c8d; border-right: 7px solid #065c8d; border-bottom: 7px solid #065c8d; ">
+
+
+<center>
+<table width="666" border="0" cellpadding="0" cellspacing="0" style=" background-color: #065c8d; ">
+<tbody><tr>
+<td>
+<div style="margin-top: 18px; margin-left: 30px; margin-bottom: 18px; font-size: 16px;">
+<a href="http://keldysh.ru/" title="Головная страница Института"><img src="~/Content/blue-ipm.gif" width="139" height="100" border="0"></a>
+</div>
+</td>
+
+<td>
+
+<div style=" text-align: right; margin-right: 25px; color: white; font-size: 16px; font-weight: bold; ">
+<div style=" margin-bottom: 18px; ">
+<a href="http://keldysh.ru/" title="Головная страница Института" class="a-white">
+ИПМ им.М.В.Келдыша</a>
+&nbsp;•&nbsp;
+<a href="http://library.keldysh.ru/prep_qf.asp" title="Поиск публикаций" class="a-white">
+Электронная библиотека</a>
+</div>
+<div><a href="http://library.keldysh.ru/preprints" title="Препринты ИПМ" class="a-white">
+Препринты ИПМ</a>
+    &nbsp;•&nbsp;
+<a href="http://library.keldysh.ru/preprint.asp?id=@DateTime.Now.Year.ToString()-@libraryId" title="Препринт № @libraryId за @DateTime.Now.Year.ToString() г." class="a-white">
+Препринт № @libraryId за @DateTime.Now.Year.ToString() г.</a>
+</div>
+</div>
+
+</td>
+
+</tr>
+</tbody></table>
+</center>
+
+<center><div style="width:666px;">
+<table border="0" cellpadding="0" cellspacing="20" width="100%">
+<tbody>
+    <tr>
+<td><img src="~/Content/monument.jpg" width="280" height="370" alt="Памятник академику М.В.Келдышу"></td>
+<td>
+    <div style="width:326px;">
+<div style=" background-color: #e0f1fc; border-width: 7px; border-color: #065c8d; border-style: solid; ">
+<center><table border="0" cellpadding="0" cellspacing="0" width="312"><tbody><tr>
+<td><div style=" height: 370px; "></div></td>
+<td valign="top">
+
+<div style=" padding-left: 14px; padding-right: 14px; padding-top: 14px; padding-bottom: 10px; ">
+
+<table border="0" cellspacing="0" cellpadding="0" width="284" style="text-align:left"><tbody><tr>
+<td width="200" style=" font-size: 14px; color: #065c8d; ">ISSN 2071-2898 (Print)<div style=" margin-top: 1px; ">ISSN 2071-2901 (Online)</div></td>
+</tr></tbody></table>
+
+<div style=" margin-top: 60px; font-size: 24px; text-align: center; font-weight: bold; line-height: 150%; color: #065c8d; ">
+    <p style="font-weight:bold;">
+        @foreach (var author in paper.Authors)
+        {
+            string name = author.LastnameRussian + " " + author.FirstnameRussian.FirstOrDefault() + "." + (author.PatronymRussian != null ? author.PatronymRussian.FirstOrDefault() + "." : string.Empty);
+            if (author.PersonalWeb != null && author.PersonalWeb.Trim().Length > 0)
+            {
+              <a href="@author.PersonalWeb">@name</a>
+            }
+            else
+            {
+             <a href="mailto:@author.Email">@name</a>
+            }
+
+        }
+    </p>
+    <p style="font-size:larger">@paper.TitleRussian</p>
+
+</div>
+<div style="margin-top:44px;margin-left:11px;margin-right:10px;font-size:16px;text-align:left;line-height:200%;word-spacing: 16px;">
+<b>
+</b>
+</div>
+</div>
+
+</td>
+</tr>  </tbody></table></center></div></div>
+</td>
+</tr>
+    <tr><td colspan="2">
+<div style=" background-color: #e0f1fc; border-width: 7px; border-color: #065c8d; border-style: solid; text-align:left "><table border="0" cellspacing="0" cellpadding="0" width="100%"><td colspan="2"><div style=" height: 100%; ">
+   @{ string allAuthors = string.Empty;
+      string firstAuthor = string.Empty;
+      if (paper.Authors.Count < 4)
+      {
+          foreach (var a in paper.Authors)
+          {
+              string name = a.FirstnameRussian.FirstOrDefault() + "." + (a.PatronymRussian != null ? a.PatronymRussian.FirstOrDefault() + "." : string.Empty) + " " + a.LastnameRussian;
+              allAuthors += name;
+              if (string.IsNullOrEmpty(firstAuthor) && paper.Authors.First().Id == a.Id)
+              {
+                  firstAuthor = name;
+              }
+              if (paper.Authors.Last().Id != a.Id)
+              {
+                  allAuthors += ", ";
+              }
+          }
+      }
+      else
+      {
+          var a = paper.Authors.First();
+          allAuthors = a.FirstnameRussian.FirstOrDefault() + "." + (a.PatronymRussian != null ? a.PatronymRussian.FirstOrDefault() + "." : string.Empty) + " " + a.LastnameRussian;
+          allAuthors += " и [др.]";
+      }
+  }
+<p style="font-size: 12px; padding:1em;"><em style="font-weight:bold;">Рекомендуемая форма библиографической ссылки:</em>    @paper.TitleRussian / @allAuthors // Препринты ИПМ им. М.В.Келдыша. @{string yeardot = DateTime.Now.Year.ToString() + ".";}@yeardot № @libraryId. @paper.NumberOfPages с. URL: <a href="http://library.keldysh.ru/preprint.asp?id=@DateTime.Now.Year.ToString()-@libraryId">http://library.keldysh.ru/preprint.asp?id=@DateTime.Now.Year.ToString()-@libraryId</a></p>
+                                                                                                                                       
+</div></td></table></div></td></tr> 
+</tbody></table>
+</div>
+</center>
+
+
+</div></div></center>
+
+
+
+</body>
+</html>
+

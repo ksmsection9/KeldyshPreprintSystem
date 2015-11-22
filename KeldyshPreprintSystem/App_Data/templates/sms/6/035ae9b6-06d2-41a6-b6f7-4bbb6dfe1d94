@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<SmsInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Body>РћС‚СЂР°Р±РѕС‚Р°РЅС‹ Р·Р°РјРµС‡Р°РЅРёСЏ РєРѕСЂСЂРµРєС‚РѕСЂР°  @firstauthor@</Body>
+  <To>toEditor</To>
+  <HourInterval>24</HourInterval>
+  <IsClosed>false</IsClosed>
+  <PaperId>-1</PaperId>
+  <StateId>6</StateId>
+  <CreationDate>2015-04-17T12:21:00.686+04:00</CreationDate>
+  <Id>StatusSmsTemplate</Id>
+</SmsInfo>

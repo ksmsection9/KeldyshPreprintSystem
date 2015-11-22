@@ -1,0 +1,135 @@
+2015-08-30 15:58:17.0958|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 15:58:50.4805|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 16:08:39.3745|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 16:08:58.6208|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: admin@localhost.localhost admin
+2015-08-30 16:09:29.2775|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: author@localhost.localhost user
+2015-08-30 16:09:55.3647|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: ad529ed3-d040-42d6-bffa-25381b3e748a
+2015-08-30 16:09:55.3647|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:True
+2015-08-30 16:11:19.3577|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-08-30 16:12:22.4164|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-08-30 16:12:46.9160|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-08-30 16:13:04.2168|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-08-30 16:22:51.2049|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 16:22:59.9269|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 16:23:26.8818|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 16:23:33.1697|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 16:23:33.6696|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 16:23:35.9613|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 16:23:56.8066|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: ad529ed3-d040-42d6-bffa-25381b3e748a
+2015-08-30 16:23:56.8066|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:True
+2015-08-30 16:24:30.3480|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: ad529ed3-d040-42d6-bffa-25381b3e748a
+2015-08-30 16:24:30.3480|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:True
+2015-08-30 16:26:22.5915|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 16:29:11.3576|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 16:29:21.1236|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 16:29:41.1613|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: ad529ed3-d040-42d6-bffa-25381b3e748a
+2015-08-30 16:29:41.1633|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:True
+2015-08-30 16:35:02.4657|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-08-30 16:35:26.9479|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 16:35:30.5060|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 16:35:44.9556|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 16:36:02.2385|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 16:36:03.4684|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: ad529ed3-d040-42d6-bffa-25381b3e748a
+2015-08-30 16:36:03.4684|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:True
+2015-08-30 16:39:39.2184|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-08-30 17:27:15.1112|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 17:50:39.2605|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 17:51:11.0050|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 17:51:14.6288|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 17:51:40.4594|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-08-30 17:53:17.3178|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 17:53:20.6905|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 17:53:38.6583|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 17:53:52.3715|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 17:54:00.3420|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: ad529ed3-d040-42d6-bffa-25381b3e748a
+2015-08-30 17:54:00.3420|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:False
+2015-08-30 18:05:46.9899|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 18:05:50.6706|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 18:06:21.3738|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 18:09:07.6245|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 18:09:15.9423|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 18:09:39.0638|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 18:10:17.8015|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: ecd8b005-245d-4ab3-b4f7-4af48fa70109
+2015-08-30 18:10:17.8015|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:True
+2015-08-30 18:11:54.2916|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-08-30 18:12:41.1017|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 18:12:44.5033|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 18:12:55.3640|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 18:13:15.8564|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 18:13:31.4517|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: 
+2015-08-30 18:14:14.9678|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-08-30 18:14:14.9678|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: none
+2015-08-30 18:14:14.9798|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: none response: True
+2015-08-30 18:14:16.8663|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: none
+2015-08-30 18:14:16.8663|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:False
+2015-08-30 18:15:06.0017|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Removing upload...
+2015-08-30 18:15:06.0037|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: none
+2015-08-30 18:15:06.0037|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Upload removed: False for guid none
+2015-08-30 18:15:22.9918|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-08-30 18:15:22.9918|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: none
+2015-08-30 18:15:23.0378|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: none response: True
+2015-08-30 18:16:21.9052|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: none
+2015-08-30 18:16:21.9052|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:False
+2015-08-30 18:21:02.2742|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 18:21:12.0592|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 18:21:23.7132|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 18:21:44.1317|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 18:21:59.0935|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: 
+2015-08-30 18:23:54.1264|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-08-30 18:24:19.4973|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 18:24:22.5698|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 18:24:32.4459|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 18:24:54.1947|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 18:25:23.0580|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: 
+2015-08-30 18:25:23.0580|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: 
+2015-08-30 18:25:52.3270|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-08-30 18:25:52.3270|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 
+2015-08-30 18:25:52.3270|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid is null. new guid: 64c4c9c5-7868-4a4e-9a97-9588811b8329
+2015-08-30 18:25:52.3270|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 64c4c9c5-7868-4a4e-9a97-9588811b8329 response: True
+2015-08-30 18:25:53.4988|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: 64c4c9c5-7868-4a4e-9a97-9588811b8329
+2015-08-30 18:25:53.5109|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:False
+2015-08-30 18:27:25.8402|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-08-30 18:31:30.1270|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 18:31:33.7971|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 18:31:51.9681|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 18:32:05.3566|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 18:32:09.0883|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-08-30 18:32:09.0883|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 
+2015-08-30 18:32:09.0883|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid is null. new guid: 7173524c-9a06-43d6-bedb-a15065ebcf92
+2015-08-30 18:32:09.0883|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 7173524c-9a06-43d6-bedb-a15065ebcf92 response: True
+2015-08-30 18:32:10.8280|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: 7173524c-9a06-43d6-bedb-a15065ebcf92
+2015-08-30 18:32:10.8280|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:False
+2015-08-30 18:39:49.8364|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-08-30 18:41:11.8854|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 18:41:15.2936|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 18:41:33.4792|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 18:41:47.1257|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 18:41:50.1509|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-08-30 18:41:50.1509|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 
+2015-08-30 18:41:50.1549|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid is null. new guid: f5316141-526d-4d2b-8a36-4b4e079029e5
+2015-08-30 18:41:50.1549|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: f5316141-526d-4d2b-8a36-4b4e079029e5 response: True
+2015-08-30 18:41:51.5541|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: f5316141-526d-4d2b-8a36-4b4e079029e5
+2015-08-30 18:41:51.5671|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:False
+2015-08-30 18:42:46.4132|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-08-30 18:42:46.4132|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 
+2015-08-30 18:42:46.4132|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid is null. new guid: 56643102-c3e2-40f8-b9e5-976ba2e506e0
+2015-08-30 18:42:46.4202|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 56643102-c3e2-40f8-b9e5-976ba2e506e0 response: True
+2015-08-30 18:42:55.3329|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: 56643102-c3e2-40f8-b9e5-976ba2e506e0
+2015-08-30 18:42:55.3329|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:False
+2015-08-30 18:46:11.5190|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: 56643102-c3e2-40f8-b9e5-976ba2e506e0
+2015-08-30 18:46:11.5190|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:False
+2015-08-30 18:50:03.7705|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 18:50:07.8409|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 18:50:39.2300|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 18:59:45.4686|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 19:01:02.3339|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 19:01:06.0043|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 19:01:16.1405|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 19:01:46.1117|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 19:03:59.3658|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 19:04:03.0248|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 19:04:10.5898|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 19:04:34.6339|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 19:38:06.4775|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-08-30 20:04:15.7363|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-08-30 20:04:18.2524|INFO|KeldyshPreprintSystem.MvcApplication|Application End

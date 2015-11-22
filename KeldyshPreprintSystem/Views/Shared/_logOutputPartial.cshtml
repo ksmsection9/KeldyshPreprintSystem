@@ -1,0 +1,91 @@
+﻿@model KeldyshPreprintSystem.Models.PanelContextModel
+@*<table style="overflow: scroll; width: 99%; height: 500px">*@
+@*    <tr>
+        <td colspan="3">
+            <table style="width: 100%; height: 500px; overflow: scroll;">*@
+@*     <tr style="height: 10%;">
+                        <td>
+                            <div id='cssmenu'>
+                                <ul role="tablist">
+                                    <li id="sublog_0" class="active"><a href="#" onclick="setSubLog(0);" role="presentation">Общий</a></li>
+                                    @if (role != "user")
+                                    {
+                                        <li id="sublog_1"><a href="#" onclick="setSubLog(1);" role="presentation">Редакции</a></li>
+                                    }
+                                    @if (role != "admin")
+                                    {
+                                        int id3 = subLogIdPartAdmin * subLogIdPart;
+                                        <li id="sublog_@id3"><a href="#" onclick="setSubLog(@subLogIdPartAdmin*subLogIdPart);" role="presentation">Редактору</a></li>
+                                    }
+                                    @if (role != "user")
+                                    {
+                                        int id4 = subLogIdPartAuthor * subLogIdPart;
+                                        <li id="sublog_@id4"><a href="#" onclick="setSubLog(@subLogIdPartAuthor*subLogIdPart);" role="presentation">Автору</a></li>
+                                    }
+                                    @if (role != "corrector")
+                                    {
+                                        int id5 = subLogIdPartCorrector * subLogIdPart;
+                                        <li id="sublog_@id5"><a href="#" onclick="setSubLog(@subLogIdPartCorrector*subLogIdPart);" role="presentation">Корректору</a></li>
+                                    }
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>*@
+@*                <tr>
+                    <td>
+                        <div class="chatBox" id="logMessagesContainer" style="height: 500px; overflow: auto">*@
+<div class="chatBox" style="overflow: hidden; border: 0;" id="logMessages">
+    @{int counter = 0;
+      bool isAuthor = (KeldyshPreprintSystem.Tools.AccountHelper.GetUserRole(WebSecurity.CurrentUserId) == "user");
+      bool newMessage = Model.Log.LastOrDefault() == null ? false : ((DateTime.Now - Model.Log.Last().TimeStamp).TotalSeconds < 10);
+      foreach (KeldyshPreprintSystem.Models.LogEntry entry in Model.Log)
+      {
+          if (isAuthor && entry.subLogId == 0)
+          {//dont show entries which are editorial internal
+              continue;
+          }
+
+          string whatWasDone = "написал";
+          if (entry.StatusChanged)
+          {
+              whatWasDone = "изменил статус";
+          }
+
+          if (counter % 2 == 0)
+          {
+        <div class="logMessage">
+            <label>@entry.TimeStamp.ToString("yyyy.MM.dd") [b]@KeldyshPreprintSystem.Tools.AccountHelper.GetRoleTranslation(entry.UserRole) [/b] @whatWasDone в @entry.TimeStamp.ToString("HH:mm")</label>
+            <br />
+            <span style="white-space: nowrap;">@entry.Message</span>
+            <hr style="padding: 0; margin-top: 1em; margin-bottom: 0;" />
+        </div>
+          }
+          else
+          {
+        <div class="logMessage" style="background-color: #e0f1fc;">
+            <label>@entry.TimeStamp.ToString("yyyy.MM.dd") [b]@KeldyshPreprintSystem.Tools.AccountHelper.GetRoleTranslation(entry.UserRole) [/b] @whatWasDone в @entry.TimeStamp.ToString("HH:mm")</label>
+            <br />
+            <span style="white-space: nowrap;">@entry.Message</span>
+            <hr style="padding: 0; margin-top: 1em; margin-bottom: 0;" />
+        </div>  
+          }
+          counter++;
+      }
+
+      if (newMessage)
+      {
+        <div id="newMessage" class="@Model.Log.Last().TimeStamp.Second"></div>
+      }
+      
+    }
+</div>
+@*</div>*@
+@*                            <textarea class="chatBox" id="logMessages" readonly="readonly" placeholder="Журнал пуст..." style="width: 100%; height: 100%; overflow: auto;"></textarea>*@
+@*                  </td>
+                </tr>
+            </table>
+        </td>
+
+    </tr>
+</table>*@
+

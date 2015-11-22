@@ -1,0 +1,1 @@
+2015-05-12 08:12:20.3787|ERROR|KeldyshPreprintSystem.Areas.Admin.Controllers.PanelController|Could not find file 'C:\Users\rshiroki\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem\App_Data\uploads\1\context.xml'.

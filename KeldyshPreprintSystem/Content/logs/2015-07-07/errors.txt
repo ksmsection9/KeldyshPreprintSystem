@@ -1,0 +1,2 @@
+2015-07-07 22:44:39.1004|ERROR|KeldyshPreprintSystem.Tools.SMSSender|Sms sending error: Unrecognized sms service response: empty field. reject number: 0000000000 message: 
+2015-07-07 22:44:40.7000|ERROR|KeldyshPreprintSystem.Tools.MailSender|Mail send exceptionSyntax error, command unrecognized. The server response was: 5.5.1 Command unrecognized: ""

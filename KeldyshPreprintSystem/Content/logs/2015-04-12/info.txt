@@ -1,0 +1,4 @@
+2015-04-12 22:03:12.8731|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-12 22:03:19.8306|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:6
+2015-04-12 22:03:20.0647|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-04-12 22:03:20.8002|INFO|KeldyshPreprintSystem.MvcApplication|Application End

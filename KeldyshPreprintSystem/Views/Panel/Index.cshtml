@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Заявки";
+    string currentRole = KeldyshPreprintSystem.Tools.AccountHelper.GetUserRole(WebSecurity.CurrentUserId);
+}
+
+<h2>Заявки на публикацию в Препринты ИПМ им.М.В.Келдыша</h2>
+@if (currentRole != "user" || KeldyshPreprintSystem.Tools.PaperSubmissionControllerHelper.GotAnySubmissions(WebMatrix.WebData.WebSecurity.CurrentUserId))
+{
+    @Html.Partial("_paperListEditorPartial")
+}
+else
+{
+    <p>Вы не подали ни одной заявки на публикацию.</p>
+    <br />
+    <a href="~/PaperSubmission/Create">Подать заявку</a>
+}
+
+<h2>Сохраненные незаконченные заявки</h2>
+@foreach (string submission in KeldyshPreprintSystem.Tools.PaperSubmissionControllerHelper.GetAllTemporarySubmissions(WebMatrix.WebData.WebSecurity.CurrentUserName))
+{
+    <a href="@Url.Action("Create", "PaperSubmission", new { guid = submission })">Незаконченная заявка @submission</a>
+}

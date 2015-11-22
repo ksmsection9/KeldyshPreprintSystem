@@ -1,0 +1,23 @@
+2015-05-10 14:22:11.6645|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-05-10 14:22:14.3449|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-05-10 14:22:14.4749|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-05-10 14:22:14.7662|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-05-10 14:22:30.0752|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-05-10 14:22:30.7489|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-05-10 14:22:30.9680|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-05-10 14:22:38.7817|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-05-10 14:22:39.7480|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-05-10 14:22:41.4436|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-05-10 14:22:41.5784|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-05-10 14:25:06.5578|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: author@localhost.localhost
+2015-05-10 14:28:10.0980|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-05-10 14:28:10.0980|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 89cb6793-110f-4846-8e31-aaeb0aee49d6
+2015-05-10 14:28:10.2129|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 89cb6793-110f-4846-8e31-aaeb0aee49d6 response: True
+2015-05-10 14:28:12.3464|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: 89cb6793-110f-4846-8e31-aaeb0aee49d6
+2015-05-10 14:28:12.3654|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:False
+2015-05-10 14:29:19.4045|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-05-10 14:37:42.7294|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-05-10 14:37:46.1832|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-05-10 14:37:46.9451|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-05-10 14:37:46.9451|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 2:1
+2015-05-10 14:37:47.1062|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5

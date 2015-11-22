@@ -1,0 +1,26 @@
+2015-03-22 20:07:45.3531|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-03-22 20:07:50.5872|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-03-22 20:07:50.6352|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-03-22 20:07:50.6352|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-03-22 20:08:19.4581|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: admin@Localhost.localhost
+2015-03-22 20:08:44.0508|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-03-22 20:30:36.2929|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-03-22 23:36:02.9330|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-03-22 23:36:07.5166|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-03-22 23:36:07.5597|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-03-22 23:36:07.5677|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-03-22 23:37:37.3205|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-03-22 23:39:49.4143|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-03-22 23:41:01.8241|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-03-22 23:41:01.8241|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-03-22 23:41:01.8341|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-03-22 23:41:01.8241|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-03-22 23:41:01.8341|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-03-22 23:54:01.1435|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-03-22 23:54:05.7063|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-03-22 23:54:27.1488|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-03-22 23:54:45.3256|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-03-22 23:54:50.6228|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-03-22 23:57:07.6357|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-03-22 23:57:31.9931|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: author@localhost.localhost
+2015-03-22 23:57:57.6694|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: corrector@localhost.localhost

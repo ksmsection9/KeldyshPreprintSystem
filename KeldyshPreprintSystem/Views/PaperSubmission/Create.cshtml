@@ -1,0 +1,939 @@
+﻿@model KeldyshPreprintSystem.Models.PaperSubmissionModel
+@{
+    ViewBag.Title = "Заявка на издание препринта ИПМ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main" class="mainDiv">
+    <h1>Заявка на издание препринта ИПМ им. М.В. Келдыша</h1>
+
+    @*@Html.ValidationSummary(KeldyshPreprintSystem.Tools.ConfigurationResourcesHelper.GetResourceVal("ru", "PleaseFixErrors"))*@
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="validation-summary-errors" data-valmsg-summary="true">
+            <span>Пожалуйста, исправьте ошибки прежде чем продолжить.</span>
+            <ul>
+                @foreach (var item in ViewContext.ViewData.ModelState)
+                {
+                    if (item.Value.Errors.Any() && ((item.Key.IndexOf("Author") > -1 && item.Key != "NumberOfAuthorsCopies")))
+                    {
+                    <li>Пожалуйста, исправьте информацию об авторах.</li>
+                        break;
+                    }
+                }
+
+                @foreach (var item in ViewContext.ViewData.ModelState)
+                {
+                    if (item.Value.Errors.Any() && ((item.Key.IndexOf("Author") < 0 || item.Key == "NumberOfAuthorsCopies")))
+                    {
+                    <li>@(string.Join("; ", item.Value.Errors.Select(x => x.ErrorMessage)))</li>
+                    }
+                }
+            </ul>
+        </div>
+                int errorCount = 0;
+        <div id="modalErrors" style="display: none; margin-left: 10px; color: #e7f4fc;" class="validation-summary-errors" data-valmsg-summary="true">
+            @*@Html.ValidationSummary(true, "Обнаружены ошибки", new { style = "color: #e7f4fc;" })*@
+            @foreach (var item in ViewContext.ViewData.ModelState)
+            {
+                if (item.Value.Errors.Any())
+                {
+                    errorCount++;
+                }
+            }
+
+            @if (errorCount % 10 == 1 && errorCount / 10 != 1)
+            {
+                <p style="margin-top: 30px">Обнаружена @errorCount ошибка. Пожалуйста, исправьте ошибки перед тем как продолжить.</p>
+            }
+
+            @if ((errorCount % 10) > 1 && (errorCount % 10) <= 4 && errorCount / 10 != 1)
+            {
+                <p style="margin-top: 30px">Обнаружены @errorCount ошибки. Пожалуйста, исправьте ошибки перед тем как продолжить.</p>
+            }
+
+            @if (errorCount % 10 > 4 || errorCount / 10 == 1 || errorCount % 10 == 0)
+            {
+                <p style="margin-top: 30px">Обнаружены @errorCount ошибок. Пожалуйста, исправьте ошибки перед тем как продолжить.</p>
+            }
+        </div>
+
+        <script src="~/Scripts/jquery-ui-1.8.24.min.js"></script>
+        <script>
+            function ShowDialog() {
+                $("#modalErrors").dialog(
+                    {
+                        create: function (event, ui) {
+                            $("body").css({ overflow: 'hidden' });
+                            $("#modalErrors").css({ display: 'normal' });
+                        },
+                        close: function (event, ui) {
+                            jQuery(document).unbind('mousedown.dialog-overlay').unbind('mouseup.dialog-overlay');
+                            jQuery('body').unbind('click');
+                            $("body").css({ overflow: 'scroll' })
+                        },
+                        width: 650,
+                        draggable: false,
+                        resizable: false,
+                        position: ['center', 'center'],
+                        show: 'fold',
+                        hide: 'fold',
+                        dialogClass: 'modalErrorPopupDialog',
+                        modal: true,
+                        closeOnEscape: true,
+                        buttons: {
+                            Ok: {
+                                priority: 'primary',
+                                text: 'OK',
+                                class: 'sumbitSubmissionBtn',
+                                click: function () {
+                                    $(this).dialog("close"); //closing on Ok click
+                                }
+                            }
+                        }
+                    }
+                    );
+
+
+                jQuery('body').bind('click', function (e) {
+                    if (jQuery('#modalErrors').dialog('isOpen')
+                    && !jQuery(e.target).is('.ui-dialog, a')
+                    && !jQuery(e.target).closest('.ui-dialog').length
+                ) {
+                        jQuery('#modalErrors').dialog('close');
+                    }
+                });
+            };
+        </script>
+    }
+
+@*@{using (Ajax.BeginForm("Create", null, new AjaxOptions() { HttpMethod = "POST", Url = "PaperSubmision" }, new { id = "preprintSubmissionForm", enctype = "multipart/form-data" }))*@
+    @{using (Html.BeginForm(null, null, FormMethod.Post, new { id = "preprintSubmissionForm", enctype = "multipart/form-data" }))
+      {
+        <h2 style="margin-bottom: 0px;">Сведения об авторах</h2>
+        <p class="authorsHint" style="margin-bottom: 15px;">
+            В той же последовательности, что и на титульном листе.
+        </p>
+        <div id="authorsBlock" class="authorsDiv">
+            @Html.Hidden("authorsIndex", Model == null ? "0" : Model.authorsIndex, new { id = "authorsIndex" })
+            @{int authorsCount = ((Model == null) ? 1 : (Convert.ToInt32(Model.authorsIndex) + 1)); //null reference protection, authorCount=1 cause there must always be atleast one field for author 
+              var authorsList = (Model == null) ? null : Model.Authors.ToList(); //null reference protection
+
+              for (int i = 0; i < authorsCount; i++)
+              {
+                  //null reference protection
+                  KeldyshPreprintSystem.Models.Author a = authorsList==null?(new KeldyshPreprintSystem.Models.Author()):authorsList[i];
+                <fieldset id="authors_@i" >
+                    <legend id="authorsLegend_@i">@(i + 1)-й автор
+                        @if (i > 0 || (authorsCount > 1 && i == 0))
+                        {  
+                            <br />
+                            <button type="button" id="removeBtn_@i" class="authorRemoveBtn" style="vertical-align:super" onclick="confirm('Удалить автора?') && RemoveAuthorFromFieldSet(@i);">Удалить?</button>
+                        }
+                    </legend>
+                    <div id="authorContainer" class="authorContainerDiv">
+                        <table style="width: 100%; border-collapse: separate; border-spacing: 10px 0; padding: 0px 0px 0px 0px; margin-left: -10px;">
+                            <tr>
+                                <td style="width: 50%;">
+                                    <h3>Полное имя на русском языке</h3>
+                                </td>
+                                <td style="width: 50%;">
+                                    <h3>Полное имя на английском языке</h3>
+                                </td>
+                            </tr>
+                            <tr class="spaceUnder">
+                                <td>
+                                    <p class="authorsHint" style="margin-top: -15px;">
+                                        Кириллица, с прописной буквы, строчными буквами, полностью. Например, Борис Николаевич Четверушкин
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="authorsHint" style="margin-top: -15px;">
+                                        Латиница, с прописной буквы, строчными буквами, полностью. Например, Boris Nikolaevich Chetverushkin
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="Authors[@i].FirstnameRussian">Имя</label>
+                                    @Html.ValidationMessage("Authors[" + @i + "].FirstnameRussian", "*")
+                                </td>
+                                <td>
+                                    <label for="Authors[@i].FirstnameEnglish">First name</label>
+                                    @Html.ValidationMessage("Authors[" + @i + "].FirstnameEnglish", "*")
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.TextBox("Authors[" + @i + "].FirstnameRussian", a.FirstnameRussian, new { type = "author", tabindex = 1 })
+                                </td>
+                                <td>
+                                    @Html.TextBox("Authors[" + @i + "].FirstnameEnglish", a.FirstnameEnglish, new { type = "author", tabindex = 4 })
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="Authors[@i].PatronymRussian">Отчество</label>
+                                    @Html.ValidationMessage("Authors[" + @i + "].PatronymRussian", "*")
+                                </td>
+                                <td>
+                                    <label for="Authors[@i].PatronymEnglish">Patronymic</label>
+                                    @Html.ValidationMessage("Authors[" + @i + "].PatronymEnglish", "*")
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.TextBox("Authors[" + @i + "].PatronymRussian", a.PatronymRussian, new { type = "author", tabindex = 2 })
+                                </td>
+                                <td>
+                                    @Html.TextBox("Authors[" + @i + "].PatronymEnglish", a.PatronymEnglish, new { type = "author", tabindex = 5 })
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="Authors[@i].LastnameRussian">Фамилия</label>
+                                    @Html.ValidationMessage("Authors[" + @i + "].LastnameRussian", "*")
+                                </td>
+                                <td>
+                                    <label for="Authors[@i].LastnameEnglish">Last name</label>
+                                    @Html.ValidationMessage("Authors[" + @i + "].LastnameEnglish", "*")
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.TextBox("Authors[" + @i + "].LastnameRussian", a.LastnameRussian, new { type = "author", tabindex = 3 })
+                                </td>
+                                <td>
+                                    @Html.TextBox("Authors[" + @i + "].LastnameEnglish", a.LastnameEnglish, new { type = "author", tabindex = 6 })
+                                </td>
+                            </tr>
+
+
+                            @*         <tr>
+                            <td colspan="3">
+                                <h3>Дополнительная информация</h3>
+                            </td>
+                        </tr>*@
+                            <tr>
+                                <td colspan="2">
+                                    <table style="border-spacing: 0px; width: 100%;">
+                                        <tr>
+                                            <td style="width: 30%">
+                                                <label for="Authors[@i].Email">Email</label>
+                                                @Html.ValidationMessage("Authors[" + @i + "].Email", "*")
+                                            </td>
+                                            <td>
+                                                <div class="spanBlockSmaller"></div>
+                                            </td>
+                                            <td style="width: 70%;">
+                                                <label for="Authors[@i].PersonalWeb">Персональная страница</label>
+                                                @Html.ValidationMessage("Authors[" + @i + "].PersonalWeb", "*")
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 30%;">
+                                                @Html.TextBox("Authors[" + @i + "].Email", a.Email, new { type = "author", tabindex = 7 })
+                                            </td>
+                                            <td>
+                                                <div class="spanBlockSmaller"></div>
+                                            </td>
+                                            <td style="width: 70%;">
+                                                @Html.TextBox("Authors[" + @i + "].PersonalWeb", a.PersonalWeb, new { type = "author", tabindex = 8 })
+                                            </td>
+                                        </tr>
+                                        <tr class="NoSpaceUnder">
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                                <p class="authorsHint">
+                                                    Если есть. Например, http://keldysh.ru/persons/gorbunov.html
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <table style="width: 100%; border-spacing: 0px;">
+                                        <tr>
+                                            <td>
+                                                <label for="Authors[@i].PlaceOfWork">Место работы</label>
+                                                @Html.ValidationMessage("Authors[" + @i + "].PlaceOfWork", "*")
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                @Html.TextBox("Authors[" + @i + "].PlaceOfWork", a.PlaceOfWork, new { type = "fullwidth", tabindex = 9 })
+                                            </td>
+                                        </tr>
+                                        <tr class="spaceUnder">
+                                            <td colspan="3">
+                                                <p class="authorsHint">
+                                                    Только для внешних авторов.
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <table style="width: 100%; border-spacing: 0px;">
+                                        <tr>
+                                            <td>
+                                                <a class="link-dot" href="#" onclick="window.open('http://elibrary.ru/author_info.asp?isnew=1', '_blank')">SPIN-код</a>
+                                                @Html.ValidationMessage("Authors[" + @i + "].SPIN", "*")
+                                            </td>
+                                            <td>
+                                                <div class="spanBlockSmaller"></div>
+                                            </td>
+                                            <td>
+                                                <a class="link-dot" href="#" onclick="window.open('http://www.researcherid.com/SelfRegistration.action', '_blank')">ResearcherID</a>
+                                                @Html.ValidationMessage("Authors[" + @i + "].ResearcherID", "*")
+                                            </td>
+                                            <td>
+                                                <div class="spanBlockSmaller"></div>
+                                            </td>
+                                            <td>
+                                                <a class="link-dot" href="#" onclick="window.open('https://orcid.org/register', '_blank')">ORCID</a>
+                                                @Html.ValidationMessage("Authors[" + @i + "].ORCID", "*")
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                @Html.TextBox("Authors[" + @i + "].SPIN", a.SPIN, new { type = "author", tabindex = 10 })
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                                @Html.TextBox("Authors[" + @i + "].ResearcherID", a.ResearcherID, new { type = "author", tabindex = 11 })
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                                @Html.TextBox("Authors[" + @i + "].ORCID", a.ORCID, new { type = "author", tabindex = 12 })
+                                            </td>
+                                        </tr>
+                                        <tr class="spaceUnder">
+                                            <td>
+                                                <p class="authorsHint">
+                                                    Если есть.
+                                                </p>
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                                <p class="authorsHint">
+                                                    Если есть.
+                                                </p>
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                                <p class="authorsHint">
+                                                    Если есть.
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </fieldset>        
+                        if (i == authorsCount - 1)
+                        {
+                <button type="button" id="addBtn_@i" style="vertical-align: super" onclick="PopulateAuthorsFieldSet();">Добавить автора</button>
+                        }
+                <div id="skipBlock_@i">
+                    <br />
+                    <br />
+                </div>
+              }
+            }
+        </div>
+        <div class="paddingDiv" style="padding-left: 0;">
+            <hr />
+        </div>
+        <br />
+        <br />
+@*<h2>Основная информация</h2>*@ 
+        <div id="titlePageBlock" class="paddingDiv">
+            <table style="width: 100%; table-layout: fixed; border-collapse: separate; border-spacing: 5px 0; margin-left: -5px;" class="paddingTable">
+                <tr>
+                    <td>
+                        <h3 style="margin-top: 0em; padding-bottom: 0em;">На русском языке</h3>
+                    </td>
+
+                    <td>
+                        <h3 style="margin-top: 0em; padding-bottom: 0em;">На английском языке</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="TitleRussian">Название препринта</label>
+                        @Html.ValidationMessage("TitleRussian", "*")
+                    </td>
+                    @* <td>
+                    <div class="spanBlockBig"></div>
+                </td>*@
+                    <td>
+                        <label for="TitleEnglish">Название препринта</label>
+                        @Html.ValidationMessage("TitleEnglish", "*")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.TextArea("TitleRussian", null, new { rows = "1", style = "width:99%; overflow: hidden; font-size:large; font-weight: bolder;" })
+                    </td>
+                    @*<td>
+                    <div class="spanBlockBig"></div>
+                </td>*@
+                    <td>
+                        @Html.TextArea("TitleEnglish", null, new { rows = "1", style = "width:99%; overfow:hidden; font-size:large; font-weight: bolder;" })
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="KeywordsRussian" id="labelKeywordsRussian">Ключевые слова</label>
+                        @Html.ValidationMessage("KeywordsRussian", "*")
+                    </td>
+                    @* <td>
+                    <div class="spanBlockBig"></div>
+                </td>*@
+                    <td>
+                        <label for="KeywordsEnglish" id="labelKeywordsEnglish">Ключевые слова</label>
+                        @Html.ValidationMessage("KeywordsEnglish", "*")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.TextBox("KeywordsRussian")
+                    </td>
+                    @*    <td>
+                    <div class="spanBlockBig"></div>
+                </td>*@
+                    <td>
+                        @Html.TextBox("KeywordsEnglish")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="AbstractRussian">Аннотация</label>
+                        @Html.ValidationMessage("AbstractRussian", "*")
+                    </td>
+                    @*   <td>
+                    <div class="spanBlockBig"></div>
+                </td>*@
+                    <td>
+                        <label for="AbstractEnglish">Аннотация</label>
+                        @Html.ValidationMessage("AbstractEnglish", "*")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @*                    @Html.EditorFor(model => model.AbstractRussian)*@
+                        @Html.TextArea("AbstractRussian", null, new { style = "width:100%; min-height: 300px;" })
+                    </td>
+                    @* <td>
+                    <div class="spanBlockBig"></div>
+                </td>*@
+                    <td>
+                        @*                     @Html.EditorFor(model => model.AbstractEnglish)*@
+                        @Html.TextArea("AbstractEnglish", null, new { style = "width:100%; min-height: 300px;" })
+                    </td>
+                </tr>
+            </table>
+        </div>
+    
+        <br />
+        <div class="paddingDiv" style="padding-left: 0;">
+            <hr />
+        </div>
+        <br />
+        <br />
+@*<h2>Служебная информация</h2>*@
+        <div id="techBlock" class="paddingDiv">
+            <table>
+                <tr>
+                    <td>
+                        <label for="Languages">Язык (языки) публикации</label>
+                        @Html.ValidationMessage("Languages", "*")
+                    </td>
+                    <td>
+                        <div class="spanBlockSmall"></div>
+                    </td>
+                    <td>
+                        <label for="NumberOfPages">Число страниц в препринте</label>
+                        @Html.ValidationMessage("NumberOfPages", "*")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.TextBox("Languages", null, new { size = 28 })
+                    </td>
+                    <td>
+                        <div class="spanBlockSmall"></div>
+                    </td>
+                    <td>
+                        @Html.TextBox("NumberOfPages", null, new { maxlength = 3, size = 3, style = "text-align: center;" })
+                    </td>
+                </tr>
+            </table>
+
+            <table class="paddingTable">
+                <tr>
+                    <td>
+                        <label for="NumberOfAuthorsCopies">Желательное число авторских экземпляров препринта</label>
+                        @Html.ValidationMessage("NumberOfAuthorsCopies", "*")
+                        <p class="generalHint">
+                            Запрашивая число авторских экземпляров, следует иметь в виду, что впоследствии в любой момент по заявке автора может быть<br />
+                            напечатан дополнительный тираж препринта и что полный текст препринта всегда доступен читателям на сайте Института.
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        @Html.TextBox("NumberOfAuthorsCopies", null, new { maxlength = 3, size = 3, style = "text-align: center;" })
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="FieldOfResearch">Направление исследований</label>
+                        @Html.ValidationMessage("FieldOfResearch", "*")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.RadioButton("FieldOfResearch", KeldyshPreprintSystem.Models.FieldsOfResearch.MathModelling, false)
+                        <span>@KeldyshPreprintSystem.Models.FieldOfResearchConverter.RussianOriginal[0]</span>
+                        <br />
+                        @Html.RadioButton("FieldOfResearch", KeldyshPreprintSystem.Models.FieldsOfResearch.MathProblems, false)
+                        <span>@KeldyshPreprintSystem.Models.FieldOfResearchConverter.RussianOriginal[1]</span>
+                        <br />
+                        @Html.RadioButton("FieldOfResearch", KeldyshPreprintSystem.Models.FieldsOfResearch.MechTasks, false)
+                        <span>@KeldyshPreprintSystem.Models.FieldOfResearchConverter.RussianOriginal[2]</span>
+                        <br />
+                        @Html.RadioButton("FieldOfResearch", KeldyshPreprintSystem.Models.FieldsOfResearch.Programming, false)
+                        <span>@KeldyshPreprintSystem.Models.FieldOfResearchConverter.RussianOriginal[3]</span>
+                        @*@Html.DropDownList("FieldOfResearch", new SelectList(items, "Value", "Text"))*@
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="link-dot" href="#" onclick="window.open('http://www.udcc.org/udcsummary/php/index.php?lang=ru', '_blank')">УДК</a>
+                        @Html.ValidationMessage("UDK", "*")
+                        <p class="authorsHint">
+                            Необязательное поле.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.TextBox("UDK")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Bibliography">Список литературы по ГОСТ 7.0.5-2008</label>
+                        @*                    @Html.ValidationMessage("Bibliography", "Необходимое для заполнения поле.", new { style = "font-size: 0.85em; vertical-align: initial;" })*@
+                        @Html.ValidationMessage("Bibliography", "*")
+                        <p class="generalHint">
+                            Скопируйте список литературы из текста препринта с сохранением нумерации.
+                        </p>
+                        <input type="checkbox" id="isBibliographyEmpty" title="Отметьте здесь, если препринт не содержит списка литературы." data-editor="Bibliography" class="tiny_mce_toggler" style="margin-left: 0px;" />
+                        <label class="generalHint">Отметьте здесь, если препринт не содержит списка литературы.</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.TextArea("Bibliography", new { cols = 100, style = "height: 400px; width:100%;" })
+                        @*                    @Html.EditorFor(model => model.Bibliography)*@
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="FinancialSupport">Финансовая поддержка</label>
+                        <p class="generalHint">
+                            Гранты, программы и пр.: "Работа поддержана грантом РФФИ ..."
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.TextBox("FinancialSupport", null, new { style = "width:99.5%;" })
+                        @Html.ValidationMessage("FinancialSupport", "*")
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td>
+                        <label for="ContactName">Автор, уполномоченный для контактов с редакцией</label>
+                        @Html.ValidationMessage("ContactName", "*")
+                    </td>
+                    <td>
+                        <div class="spanBlockSmall"></div>
+                    </td>
+                    <td>
+                        <label for="ContactPhone">Номер телефона</label>
+                        @Html.ValidationMessage("ContactPhone", "*")
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.TextBox("ContactName", null, new { type = "fullwidth" })
+                    </td>
+                    <td>
+                        <div class="spanBlockSmall"></div>
+                    </td>
+                    <td>
+                        @Html.TextBox("ContactPhone", null, new { type = "fullwidth" })
+                    </td>
+                    <td>
+                        <p class="authorsHint" style="margin-left: 10px;">
+                            Желательно указать номер мобильного телефона.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="paddingTable">
+                <tr>
+                    <td>
+                        <label for="Review">Рецензия и заключение руководителя отдела</label>
+                        @*                    @Html.ValidationMessage("Review", "Необходимое для заполнения поле.", new { style = "font-size: 0.85em; vertical-align: initial;" })*@
+                        @Html.ValidationMessage("Review", "*")
+                        <p class="generalHint">
+                            Поле рецензии (не более 2000 символов, считая пробелы) заполняет зав. отделом.<br />
+                            Если зав. отделом является автором, рецензирует препринт либо заведующий отделом, родственным по тематике, либо член дирекции.<br />
+                            Заполняется обязательно.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @*                    @Html.EditorFor(model => model.Review)*@
+                        @Html.TextAreaFor(model => model.Review, new { style = "height: 300px; width:100%;" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4 style="margin: 0px;">Сведения о рецензенте</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table style="width: 100%; border-spacing: 0px 0px; border-left: 0px none;">
+                            <tr>
+                                <td>
+                                    <label for="Reviewer.Firstname">Имя</label>
+                                    @Html.ValidationMessage("Reviewer.Firstname", "*")
+                                </td>
+                                <td>
+                                    <label for="Reviewer.Patronym">Отчество</label>
+                                    @Html.ValidationMessage("Reviewer.Patronym", "*")
+                                </td>
+                                <td>
+                                    <label for="Reviewer..Lastname">Фамилия</label>
+                                    @Html.ValidationMessage("Reviewer.Lastname", "*")
+                                </td>
+                                <td>
+                                    <div class="spanBlockSmall"></div>
+                                </td>
+                                <td>
+                                    <label for="Reviewer.JobTitle">Должность</label>
+                                    @Html.ValidationMessage("Reviewer.JobTitle", "*")
+                                </td>
+                                <td>
+                                    <label for="Reviewer.Degree">Ученая степень</label>
+                                    @Html.ValidationMessage("Reviewer.Degree", "*")
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding-right: 1em;">
+                                    @Html.TextBoxFor(m => m.Reviewer.Firstname, new { type = "fullwidth" })
+                                </td>
+                                <td style="padding-right: 1em;">
+                                    @Html.TextBoxFor(m => m.Reviewer.Patronym, new { type = "fullwidth" })
+                                </td>
+                                <td style="padding-right: 1em;">
+                                    @Html.TextBoxFor(m => m.Reviewer.Lastname, new { type = "fullwidth" })
+                                </td>
+                                <td>
+                                    <div class="spanBlockSmall"></div>
+                                </td>
+                                <td style="padding-right: 1em;">
+                                    @Html.TextBoxFor(m => m.Reviewer.JobTitle, new { type = "fullwidth" })
+                                </td>
+                                <td style="padding-right: 0.4em;">
+                                    @Html.TextBoxFor(m => m.Reviewer.Degree, new { type = "fullwidth" })
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <br />
+        <div id="fileUpload" class="paddingDiv">
+            <table>
+                <tr>
+                    <td>
+                        <label for="Attachment">Файл публикации (.doc, .docx или .pdf)</label>
+                        @Html.ValidationMessage("Attachment", "*")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @*<input type="file" name="Attachment" id="Attachment" accept=".doc, .docx, .pdf" />*@
+                        @*<div id="fileUploadDiv" class="uploadBox"><div style="display: table-cell; vertical-align: middle;"><p style="color:#0000FF; margin: 0 0 0 0;">выбрать</p><br />или<br />перетащить cюда</div></div>*@
+                        <div id="fileUploadDiv" class="dropzone" style="width: 250px; height: 200px;">
+                            <div class="fallback"></div>
+                        </div>
+                        <input type="hidden" id="uploadedFileInfo" value="@ViewBag.UploadedInfo"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <p style="position: absolute; left: 512px; margin-top: -25px; text-align: center; padding-bottom: 25px;">
+            <input type="submit" class="sumbitSubmissionBtn" onclick="TrimAuthorsFieldSet();" value="Отправить" />
+            <input type="button" class="sumbitSubmissionBtn" onclick="SendTemporarySubmission();" value="Сохранить" />
+
+        </p>
+    
+              /*Model State Errors Hidden Table */
+        <table id="validationErrors" style="display: none; overflow: hidden;">
+            @foreach (var item in ViewContext.ViewData.ModelState)
+            {
+                if (item.Value.Errors.Any())
+                { 
+                <tr>
+                    <td>@item.Key</td>
+                    @*                <td>@((item.Value == null || item.Value.Value == null) ? "<null>" : item.Value.Value.RawValue)</td>*@
+                    <td>@(string.Join("; ", item.Value.Errors.Select(x => x.ErrorMessage)))</td>
+                </tr>
+                }
+            }
+        </table>
+      }
+    }
+
+
+    @section scripts
+{
+        <script src="@Url.Content("~/Scripts/tinymce/tiny_mce.js")" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(function () {
+                tinyMCE.init({
+                    // General options
+                    mode: "exact",
+                    elements: "Review",
+                    theme: "advanced",
+                    height: "300",
+                    verify_html: false,
+                    plugins: "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave",
+
+                    // Theme options
+                    theme_advanced_buttons1: "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,fontselect,fontsizeselect",
+                    theme_advanced_buttons2: "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,image,cleanup,code",
+                    theme_advanced_buttons3: "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap|,ltr,rtl,|,visualchars,nonbreaking",
+                    theme_advanced_toolbar_location: "top",
+                    theme_advanced_toolbar_align: "left",
+                    theme_advanced_statusbar_location: "bottom",
+                    theme_advanced_resizing: false,
+
+                    // Example content CSS (should be your site CSS)
+                    //content_css : "css/content.css",
+                    //content_css : "@Url.Content("~/Content/Site.css")",
+                    convert_urls: false,
+
+                    // Drop lists for link/image/media/template dialogs
+                    template_external_list_url: "lists/template_list.js",
+                    external_link_list_url: "lists/link_list.js",
+                    external_image_list_url: "lists/image_list.js",
+                    media_external_list_url: "lists/media_list.js",
+                    init_instance_callback: "setTabIndex"
+                });
+
+                //bibliography
+                tinyMCE.init({
+                    // General options
+                    mode: "exact",
+                    elements: "Bibliography",
+                    theme: "simple",
+                    height: "400",
+                    init_instance_callback: "setTabIndex"
+                });
+
+                //abstract ru
+                tinyMCE.init({
+                    // General options
+                    mode: "exact",
+                    elements: "AbstractRussian",
+                    theme: "simple",
+                    init_instance_callback: "setTabIndex"
+                });
+
+                //abstract en
+                tinyMCE.init({
+                    // General options
+                    mode: "exact",
+                    elements: "AbstractEnglish",
+                    theme: "simple",
+                    init_instance_callback: "setTabIndex"
+                });
+
+                var TinyMceToggler = function (_checkbox) {
+                    var checkbox = $(_checkbox);
+                    var editor = checkbox.data('editor');
+
+                    checkbox.click(function () {
+                        if (!this.checked) {
+                            $('#Bibliography').val("");
+                            tinyMCE.execCommand('mceAddEditor', false, editor);
+                        }
+                        else {
+                            tinyMCE.execCommand('mceRemoveEditor', false, editor);
+                            $('#Bibliography').attr('readonly', 'readonly');
+                            $('#Bibliography').val("Список литературы отсутствует в препринте.");
+                        }
+                    });
+                };
+
+                $("input.tiny_mce_toggler").each(function () { new TinyMceToggler(this); });
+            });
+
+        </script>
+        <script src="@Url.Content("~/Scripts/AuthorBlock.js")"></script>
+        <script src="@Url.Content("~/Scripts/notify.min.js")"></script>
+        <script src="@Url.Content("~/Scripts/autogrow.js")"></script>
+        <script src="@Url.Content("~/Scripts/jquery.tag-editor.js")"></script>
+        <script src="@Url.Content("~/Scripts/jquery.maskedinput.min.js")"></script>
+        <script type="text/javascript">
+            if (typeof jQuery !== 'undefined') {
+                var $ = jQuery.noConflict();
+            }
+        </script>
+        <script>
+            $(document).ready(function () {
+                //$(document).scrollTop(localStorage['scrollPosition']);
+                $(document).scrollTop();
+                $("body").css({ overflow: 'hidden' });
+                $("#ContactPhone").mask("(999) 999-99-99");
+                $("#validationErrors tr").each(function () {
+                    var key = $(this).children().eq(0).text()
+                    //alert(key);
+                    var value = $(this).children().eq(1).text();
+                    if (key.indexOf('Author') > -1 && key != 'NumberOfAuthorsCopies' && value.indexOf('Пожалуйста') > 1)
+                        $("input[name='" + key + "']").notify(value, { position: "top", className: "error", autoHideDelay: 60000 });
+                });
+
+                $("#labelKeywordsRussian").notify("Разделяйте ключевые слова нажатием кнопки Enter", { position: "right", className: "info", autoHideDelay: 120000 });
+                //$("#KeywordsEnglish").notify("Нажмите Enter после ввода ключевого слова", { position: "right", className: "info" });
+
+                $("#KeywordsRussian").tagEditor({
+                    //initialTags: ["Введите ключевые слова,","разделяя их нажатием кнопки Enter"],
+                    delimiter: ';',
+                    placeholder: 'Введите ключевые слова, разделяя их нажатием кнопки Enter',
+                    maxLength: 32,
+                    //onChange: function () {
+                    //    $(this).removeTag("Введите ключевые слова", "разделяя их нажатием кнопки Enter");
+                    //}
+                });
+
+
+                $("#KeywordsEnglish").tagEditor({
+                    delimiter: ';',
+                    placeholder: 'Введите ключевые слова, разделяя их нажатием кнопки Enter',
+                    maxLength: 32
+                });
+
+
+                $('#TitleRussian').autogrow();
+                $('#TitleEnglish').autogrow();
+                $('#TitleRussian').trigger('keyup');//this is needed to handle newlines in titles
+                $('#TitleEnglish').trigger('keyup');//this is needed to handle newlines in titles
+
+                $('#TitleRussian').on('keyup', function () {
+                    $('#TitleRussian').val().replace('\r', '').replace('\n', '').replace('  ', ' ');
+                });
+
+                $('#TitleEnglish').on('keyup', function () {
+                    $('#TitleEnglish').val().replace('\r', '').replace('\n', '').replace('  ', ' ');
+                });
+
+                $("body").css({ overflow: "visible" });
+
+                try {
+                    ShowDialog();
+                }
+                catch (e) { };
+
+                Dropzone.autoDiscover = false;
+
+            });
+
+            function setTabIndex() {
+                $(".mceButton").attr("tabIndex", "-1");
+                $(".mceEditor").css("width", "100%");
+            }
+
+            function SendTemporarySubmission() {
+                $.get('@Url.Action("SaveTemporarySubmission", "PaperSubmission", "https")' + '?' + $("#preprintSubmissionForm").serialize()+"&anticache=@Guid.NewGuid().ToString()");
+                $.notify("Заявка сохранена!");
+            }
+
+            $(function () {
+                // Now that the DOM is fully loaded, create the dropzone, and setup the
+                // event listeners
+
+                var myDropzone = $("#fileUploadDiv").dropzone({
+                    url: "/FileUpload/SaveUploadedFile",
+                    maxFiles: 1,
+                    dictDefaultMessage: "Перетащите сюда файл препринта или кликните чтобы выбрать файл",
+                    dicMaxFilesExceeded: "Можно загрузить только один файл",
+                    dictInvalidFileType: "Недопустимое расширение файла. Допустимые расширения: .doc, .docx и .pdf.",
+                    dictRemoveFile: "Удалить файл",
+                    dictCancelUpload: "Прекратить загрузку",
+                    dictCancelUploadConfirmation: "Подтвердите прекращение загрузки",
+                    acceptedFiles: ".doc, .docx, .pdf",
+                    addRemoveLinks: true,
+                    uploadMultiple: false,
+                    init: function () {
+                        this.on("addedfile", function () {
+                            if (this.files[1] != null) {
+                                this.removeFile(this.files[0]);
+                            }
+                        });
+
+                        this.on("removedfile", function (file) {
+                            /* Maybe display some more file information on your page */
+                            var url = "/FileUpload/DeleteUploadedFile";
+                            $.get(url, null, function (data) {
+                            });
+                        });
+
+                        this.on("maxfilesexceeded", function (file) { this.removeFile(file); });
+
+                        if ($('#uploadedFileInfo').val() != '') {
+                            var mockFile = { name: "Вы уже загрузили файл", size: parseInt($('#uploadedFileInfo').val()) };
+                            this.emit("addedfile", mockFile);
+                        }
+                    }
+                });
+            })
+
+            //$(document).scroll(function () {
+            //    //localStorage['scrollPosition'] = $(document).scrollTop();
+            //});
+        </script>
+    }
+</div>

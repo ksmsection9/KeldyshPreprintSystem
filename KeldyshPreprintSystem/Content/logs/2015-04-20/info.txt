@@ -1,0 +1,55 @@
+2015-04-20 15:24:04.8410|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-20 15:24:07.5987|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-20 15:24:41.6557|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-20 15:24:59.1180|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: corrector@localhost.localhost
+2015-04-20 15:26:56.2220|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-20 15:26:56.3470|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-20 15:28:06.0829|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-20 15:29:25.5874|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-20 15:29:37.4220|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-20 15:29:38.3596|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-20 15:29:46.1686|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-20 15:29:46.7624|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-20 15:29:56.5526|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-20 15:31:19.9781|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-20 15:35:27.0046|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-20 15:35:30.5853|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-20 15:35:32.0135|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-20 15:35:32.1856|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-20 15:36:07.4430|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-20 15:36:07.9743|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-20 15:36:58.4069|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-04-20 15:36:58.4069|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 
+2015-04-20 15:36:58.4069|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid is null. new guid: 1a26415f-d048-4086-8844-afb4406b1920
+2015-04-20 15:36:58.4226|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 1a26415f-d048-4086-8844-afb4406b1920 response: True
+2015-04-20 15:37:26.3891|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-04-20 15:37:26.4047|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 1a26415f-d048-4086-8844-afb4406b1920
+2015-04-20 15:37:26.4047|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 1a26415f-d048-4086-8844-afb4406b1920 response: True
+2015-04-20 15:40:33.8673|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-04-20 15:40:33.8673|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 1a26415f-d048-4086-8844-afb4406b1920
+2015-04-20 15:40:33.8673|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 1a26415f-d048-4086-8844-afb4406b1920 response: True
+2015-04-20 15:43:14.3469|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-20 15:43:17.8940|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-20 15:43:18.7222|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-20 15:43:18.8472|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-20 15:43:23.4724|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-20 15:43:24.1287|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-20 15:43:44.3170|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-04-20 15:43:44.3170|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 
+2015-04-20 15:43:44.3170|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid is null. new guid: bc8b59d3-4a70-49d3-a02b-421d520e6062
+2015-04-20 15:43:44.3795|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: bc8b59d3-4a70-49d3-a02b-421d520e6062 response: True
+2015-04-20 15:49:32.6503|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-04-20 15:49:32.6503|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: bc8b59d3-4a70-49d3-a02b-421d520e6062
+2015-04-20 15:49:32.6503|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: bc8b59d3-4a70-49d3-a02b-421d520e6062 response: True
+2015-04-20 15:51:15.6522|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-04-20 15:51:15.6522|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: bc8b59d3-4a70-49d3-a02b-421d520e6062
+2015-04-20 15:51:15.6522|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: bc8b59d3-4a70-49d3-a02b-421d520e6062 response: True
+2015-04-20 15:53:18.0276|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-04-20 15:53:18.0276|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: bc8b59d3-4a70-49d3-a02b-421d520e6062
+2015-04-20 15:53:18.0432|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: bc8b59d3-4a70-49d3-a02b-421d520e6062 response: True
+2015-04-20 16:09:15.0417|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-20 16:09:17.6200|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-20 16:09:18.7138|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4
+2015-04-20 16:09:19.0576|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-20 16:09:23.2031|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-20 16:09:23.8565|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:4

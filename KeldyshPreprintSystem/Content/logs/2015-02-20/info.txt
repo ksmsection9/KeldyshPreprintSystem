@@ -1,0 +1,31 @@
+2015-02-20 03:26:46.6803|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-20 03:26:55.7656|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-20 03:26:55.8167|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-20 03:27:13.5280|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-02-20 03:27:13.6521|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-02-20 03:27:21.6509|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: admin@localhost.localhost
+2015-02-20 03:27:38.2226|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-02-20 03:28:56.5534|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-20 03:29:48.2155|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-20 03:29:56.0185|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-20 03:29:56.0846|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-20 03:30:38.5593|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: author@localhost.localhost
+2015-02-20 03:31:34.7703|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-20 03:31:40.3889|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-20 03:31:42.7487|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-20 03:31:42.8267|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-20 03:33:15.3253|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-02-20 03:33:15.3263|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 
+2015-02-20 03:33:15.3263|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid is null. new guid: 31630ce8-4f17-464f-9862-3c25c4935670
+2015-02-20 03:33:15.3974|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 31630ce8-4f17-464f-9862-3c25c4935670 response: True
+2015-02-20 03:33:17.2240|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: 31630ce8-4f17-464f-9862-3c25c4935670
+2015-02-20 03:33:17.2240|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:False
+2015-02-20 03:35:22.3923|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-02-20 03:35:26.0850|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-02-20 03:35:28.3113|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:1
+2015-02-20 03:35:28.3713|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-20 03:35:28.3753|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-02-20 03:35:40.8275|INFO|KeldyshPreprintSystem.Controllers.AccountController|Unsuccessful login
+2015-02-20 03:35:44.2223|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: admin@localhost.localhost
+2015-02-20 03:36:36.9779|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-02-20 03:40:19.5207|INFO|KeldyshPreprintSystem.MvcApplication|Application Error

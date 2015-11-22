@@ -1,0 +1,8 @@
+2015-03-17 23:52:08.5651|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-03-17 23:52:17.4884|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:4
+2015-03-17 23:52:17.7786|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-03-17 23:52:17.8177|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:5
+2015-03-17 23:52:29.3256|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-03-17 23:52:57.1544|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: admin@localhost.localhost
+2015-03-17 23:53:02.2094|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-03-17 23:55:37.1709|INFO|KeldyshPreprintSystem.MvcApplication|Application End

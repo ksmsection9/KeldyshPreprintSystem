@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Ваша заявка принята!";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Заявка принята!</h2>
+<table>
+    <tr>
+        <td>
+            <a id="linkDocx" href="~/PaperSubmission/Download?id=@ViewBag.paperId.ToString()&type=docx">Скачать печатную версию заявки (.docx)</a>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            <a id="linkPdf" href="~/PaperSubmission/Download?id=@ViewBag.paperId.ToString()&type=pdf">Скачать печатную версию заявки (.pdf)</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a id="linkHome" href="~/">Перейти на главную страницу</a>
+        </td>
+    </tr>
+</table>

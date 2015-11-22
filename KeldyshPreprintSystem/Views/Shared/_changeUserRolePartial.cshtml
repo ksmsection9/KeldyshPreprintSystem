@@ -1,0 +1,23 @@
+﻿@model int
+@{
+    ViewBag.Title = "ChangeUserRole";
+}
+
+<div id="changeUserRole" style="display: table; margin: 0 auto;">
+    <h4>Сменить роль</h4>
+    Текущая роль: @KeldyshPreprintSystem.Tools.AccountHelper.GetUserRole(WebSecurity.CurrentUserId)<br />
+    @foreach (var role in KeldyshPreprintSystem.Tools.AccountHelper.GetAllRoles())
+    {
+        @Html.RadioButton("roleChooser", role, (KeldyshPreprintSystem.Tools.AccountHelper.GetUserRole(WebSecurity.CurrentUserId) == role), new { onclick = "ChangeRole(); return true;" }) @role<br />
+    }
+    @if (KeldyshPreprintSystem.Tools.AccountHelper.GetUserRole(WebSecurity.CurrentUserId) == "admin")
+    {
+        <a href="@Url.Action("ResetStatus", "Panel", new { area = "", controller = "Panel" }, "https")?id=@Model">Сбросить статус заявки!</a>
+    }
+    <script>
+        function ChangeRole() {
+            var targetRole = $("input[id=roleChooser]:checked").val();
+            $.get("@Url.Action("SetUserRole", "Settings", new { area = "Admin", controller = "Settings" }, "https")" + "?username=@WebSecurity.CurrentUserName&role=" + targetRole + "&anticache=@Guid.NewGuid().ToString()", function (data) { location.reload(); });
+        }
+    </script>
+</div>

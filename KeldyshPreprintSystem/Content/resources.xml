@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <options translation="Опции">
+    <EmailNotificationAddress translation="Адрес посылки извещений">shirokiy@keldysh.ru</EmailNotificationAddress>
+    <SMSAccount translation="Аккаунт в системе SMS Aero">leofrik@yandex.ru</SMSAccount>
+    <SMSPassword translation="Пароль к аккаунту в системе SMS Aero">ae06860210ac56eb20e13e2b5a75c111</SMSPassword>
+    <SMSSign translation="Подпись смс сообщения (должна быть согласована с SMS Aero)">IPMKELDYSH</SMSSign>
+    <CloudConvertApiKey translation="Ключ разработчика в Cloud Convert">XF7Lo5SLesJym-D04SMd4UksbTYYHOZBK1FI8iZyiyVH9pySdcnUZbXPzI6Y8ONEYmgPmh6rW-_nvsks6elmIQ</CloudConvertApiKey>
+  </options>
+  <mailinglist translation="Адреса и телефоны рассылок">
+    <EditorialBoard translation="Ред. коллегия формат: (email, @editorialboardmembershortname@, @editorialboardmembergreeting@;)">email1@email1.org, И. И. Иванов, Уважаемый Иван Иванович!; email2@email1.org, С.С. Степанова, Уважаемая Степанида Степановна; </EditorialBoard>
+    <EditorMail translation="Почта редактора">email@email.org</EditorMail>
+    <EditorPhone translation="Телефон редактора хххxxxxxxx">9991112233</EditorPhone>
+    <CorrectorMail translation="Почта корректора">email@email.org</CorrectorMail>
+    <CorrectorPhone translation="Телефон корректора хххxxxxxxx">9991112233</CorrectorPhone>
+    <TypographerPhone translation="Телефон полиграфиста хххxxxxxxx">9991112233</TypographerPhone>
+  </mailinglist>
+  <messages translation="Тексты сообщений">
+    <EmailSubmissionNotificationTitle translation="Заголовок сообщения с извещением о поданной заявке">Проверка оповещения о поданной заявке</EmailSubmissionNotificationTitle>
+    <EmailSubmissionNotification translation="Текст сообщения с извещением о поданной заявке">Уважаемый @firstname@ @lastname@ @patronymic@! Это тестовое письмо с оповещением о получении заявки на публикацию!</EmailSubmissionNotification>
+    <SMSSubmissionNotification translation="Текст сообщения с извещением по смс о поданной заявке">Уважаемый @contactname@! Заявка на публикацию препринта "@title@" принята под номером @id@!</SMSSubmissionNotification>
+    <SmsEditorialBoard translation="Текст СМС сообщения члену редколлегии о принятой заявке">Новый препринт: @firstauthor@</SmsEditorialBoard>
+    <EmailSubjectEditorialBordNotification translation="Заголовок сообщения с извещением члена редколлегии о принятой заявке">Новый препринт: @firstauthor@</EmailSubjectEditorialBordNotification>
+    <EmailBodyEditorialBordNotification translation="Текст сообщения с извещением члена редколлегии о принятой заявке">Члену редколлегии "Препринты ИПМ им.М.В.Келдыша" @editorialboardmembershortname@! @editorialboardmembergreeting@ Поступил новый препринт @allauthors@, @title@. Препринты ИПМ</EmailBodyEditorialBordNotification>
+  </messages>
+</resources>

@@ -1,0 +1,9 @@
+﻿@{
+    KeldyshPreprintSystem.Models.PaperSubmissionModel paper = Model as KeldyshPreprintSystem.Models.PaperSubmissionModel;
+}
+<div style="min-width: 300px;">
+    <p style="font-weight: 600; margin-bottom: 0px; display: inline;">Статус @paper.submissionState:</p>
+    <p style="margin-top: 5px; display: inline;">
+        @KeldyshPreprintSystem.Tools.EditorHelper.GetStatusDescription(paper.submissionState)
+    </p>
+</div>

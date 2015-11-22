@@ -1,0 +1,14 @@
+2015-07-12 14:56:33.1387|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-07-12 14:56:48.2347|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-07-12 14:57:05.4404|INFO|KeldyshPreprintSystem.Controllers.AccountController|ConfirmationURL: https://localhost/Account/RegisterConfirmation?token=_xcL6tzFWlRth_wZbKYWCw2
+2015-07-12 14:57:38.6984|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-07-12 14:57:38.7140|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-07-12 14:58:34.8317|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-07-12 14:58:36.5416|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-07-12 14:58:48.1176|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-07-12 14:59:08.7004|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-07-12 14:59:25.3632|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-07-12 14:59:50.8218|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-07-12 14:59:58.0888|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-07-12 15:00:06.9374|INFO|KeldyshPreprintSystem.Controllers.AccountController|ConfirmationURL: https://localhost/Account/RegisterConfirmation?token=lEyuaw7FlZOJpby5pylSBQ2
+2015-07-12 15:42:09.9892|INFO|KeldyshPreprintSystem.MvcApplication|Application End

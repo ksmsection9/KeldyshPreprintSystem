@@ -1,0 +1,51 @@
+2015-04-14 00:07:34.3432|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-14 00:07:36.8399|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:6
+2015-04-14 00:07:36.9649|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-04-14 00:07:37.4024|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-14 00:07:51.3336|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-14 00:07:52.0708|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:6
+2015-04-14 00:07:52.1958|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-04-14 00:07:55.3160|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-14 00:07:56.1845|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-14 00:07:57.6899|INFO|KeldyshPreprintSystem.Tools.DailySendEmailJob|new job 1:6
+2015-04-14 00:07:57.7993|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-04-14 00:07:57.8618|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-14 00:08:09.5340|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: admin@localhost.localhost
+2015-04-14 00:13:19.3615|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: author@localhost.localhost
+2015-04-14 00:25:21.2986|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|Saving file...
+2015-04-14 00:25:21.2986|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 2745701a-8a8f-4de6-9836-7c57ecfc5885
+2015-04-14 00:25:21.3924|INFO|KeldyshPreprintSystem.Controllers.FileUploadController|guid: 2745701a-8a8f-4de6-9836-7c57ecfc5885 response: True
+2015-04-14 00:25:23.4154|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: 2745701a-8a8f-4de6-9836-7c57ecfc5885
+2015-04-14 00:25:23.4310|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:False
+2015-04-14 00:25:36.5764|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|subid: 2745701a-8a8f-4de6-9836-7c57ecfc5885
+2015-04-14 00:25:36.5764|INFO|KeldyshPreprintSystem.Controllers.PaperSubmissionController|IsAttachmentNull:False
+2015-04-14 00:31:23.7574|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: admin@localhost.localhost
+2015-04-14 00:32:29.1789|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-14 00:33:03.6294|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-14 00:33:07.3060|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-14 00:33:08.2175|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-04-14 00:33:08.4546|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-14 00:33:58.9124|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-14 00:33:59.4075|INFO|KeldyshPreprintSystem.Tools.DailySendSMSJob|new job 1:5
+2015-04-14 00:41:29.4608|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-14 00:41:32.7239|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-14 00:41:33.6214|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-14 00:41:45.9948|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-14 00:43:55.0834|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-14 00:43:58.4368|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-14 00:43:59.3299|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-14 00:44:09.7975|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-14 00:44:30.0383|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-14 00:44:46.9725|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-14 00:44:49.6421|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-14 00:44:50.5284|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-14 00:45:00.6365|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-14 00:50:21.8908|INFO|KeldyshPreprintSystem.MvcApplication|Application Error
+2015-04-14 00:50:27.6431|INFO|KeldyshPreprintSystem.Controllers.AccountController|Successful login: admin@localhost.localhost
+2015-04-14 00:52:42.8768|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-14 00:52:44.5291|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-14 00:52:52.2414|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-14 00:52:53.6928|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-14 00:52:56.3726|INFO|KeldyshPreprintSystem.MvcApplication|Application End
+2015-04-14 00:52:57.6024|INFO|KeldyshPreprintSystem.MvcApplication|Application Start
+2015-04-14 04:25:21.5801|INFO|KeldyshPreprintSystem.MvcApplication|Application End

@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Рассылки";
+    List<string[]> mailingInfo = Model as List<string[]>;
+}
+
+<h2>Запланированные рассылки</h2>
+<table border="1" style="border: 2px solid black">
+    <tr>
+        <th>Идентификатор</th>
+        <th>Адресат</th>
+        <th>Тема</th>
+        <th>Сообщение</th>
+        <th>Дата создания</th>
+        <th>Интервал</th>
+    </tr>
+    @foreach (string[] info in mailingInfo)
+    {
+        <tr>
+            <td>
+                @info[0]
+            </td>
+            <td>
+                @info[1]
+            </td>
+            <td>
+                @info[2]
+            </td>
+            <td>
+                @info[3]
+            </td>
+            <td>
+                @info[4]
+            </td>
+               <td>
+                @info[5]
+            </td>
+        </tr>
+    }
+</table>

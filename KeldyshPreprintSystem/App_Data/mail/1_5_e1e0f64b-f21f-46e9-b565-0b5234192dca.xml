@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<MailInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Subject>Р—Р°РІРµСЂС€РµРЅР° РєРѕСЂСЂРµРєС‚СѓСЂР° РїСЂРµРїСЂРёРЅС‚Р°</Subject>
+  <Body>РЈРІР°Р¶Р°РµРјС‹Рµ Р°РІС‚РѕСЂС‹! Р’Р°С€ РїСЂРµРїСЂРёРЅС‚ Рё Р·Р°СЏРІРєР° Р±С‹Р»Рё РЅР°РїСЂР°РІР»РµРЅС‹ РЅР° РєРѕСЂСЂРµРєС‚СѓСЂСѓ. Р РµР·СѓР»СЊС‚Р°С‚С‹ РєРѕСЂСЂРµРєС‚СѓСЂС‹ РІ РїСЂРёР»Р°РіР°РµРјС‹С… С„Р°Р№Р»Р°С….
+@messages@ РќР°РїРѕРјРёРЅР°РµРј, С‡С‚Рѕ РїСЂРµРґР»РѕР¶РµРЅРёСЏ РєРѕСЂСЂРµРєС‚РѕСЂР° РЅРµ РѕР±СЏР·Р°С‚РµР»СЊРЅС‹ Рє РёСЃРїРѕР»РЅРµРЅРёСЋ: РїРѕСЃР»РµРґРЅРµРµ СЃР»РѕРІРѕ Р·Р° Р°РІС‚РѕСЂРѕРј.
+РџСЂРµРїСЂРёРЅС‚С‹ РРџРњ. РџРёСЃСЊРјРѕ РѕС‚РїСЂР°РІР»РµРЅРѕ СЂРѕР±РѕС‚РѕРј, РѕС‚РІРµС‡Р°С‚СЊ РЅР° РЅРµРіРѕ РЅРµ РЅР°РґРѕ. РџРµСЂРµРїРёСЃРєР° СЃ СЂРµРґР°РєС†РёРµР№ Рё РєРѕСЂСЂРµРєС†РёСЏ РјР°С‚РµСЂРёР°Р»РѕРІ РІС‹РїРѕР»РЅСЏСЋС‚СЃСЏ С‚РѕР»СЊРєРѕ С‡РµСЂРµР· СЃР°Р№С‚ https://preprint.keldysh.ru</Body>
+  <From>shirokiy@keldysh.ru</From>
+  <To>author@localhost.localhost</To>
+  <Attachments>
+    <string>C:\Users\rshiroki\Desktop\KeldyshPreprintSystem\KeldyshPreprintSystem\App_Data\uploads\1\8ec58ecf-85db-4691-a1e0-eeaf50a6e519.pdf</string>
+    <string />
+  </Attachments>
+  <HourInterval>24</HourInterval>
+  <IsClosed>false</IsClosed>
+  <PaperId>1</PaperId>
+  <StateId>5</StateId>
+  <CreationDate>2015-04-14T00:10:09.0929844+03:00</CreationDate>
+  <Id>1_5_e1e0f64b-f21f-46e9-b565-0b5234192dca</Id>
+</MailInfo>
